@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-61:12
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-71:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\31663\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\6362c13b7ebd95d3ce5597eae24eda3e\AndroidManifest.xml:17:1-22:12
 MERGED from [com.trello.rxlifecycle2:rxlifecycle-components:2.1.0] C:\Users\31663\.gradle\caches\transforms-1\files-1.1\rxlifecycle-components-2.1.0.aar\8aaf6ca414684a7409c9afbe06f93709\AndroidManifest.xml:13:1-19:12
 MERGED from [com.github.hymanme.tagflowlayout:tagflowlayout:0.2.2] C:\Users\31663\.gradle\caches\transforms-1\files-1.1\tagflowlayout-0.2.2.aar\9ed0e915c9f26873daa90fc23aecd1fe\AndroidManifest.xml:2:1-17:12
@@ -37,22 +37,22 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\31663\.gradle\caches
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\31663\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\e59300920d59a600216de432c135058e\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\31663\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\f9459c6a1f2aedc5864c5219321064e8\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\31663\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\56c50c283ade0bd74bd069480452dd1b\AndroidManifest.xml:17:1-22:12
-INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-71:12
 	package
 		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:4:11-40
 		INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml
 		INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-61:12
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-71:12
 		INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:3:11-57
 	android:versionCode
 		INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-61:12
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:1-71:12
 		INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:2:11-69
@@ -105,7 +105,7 @@ ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:19:5-73
 	android:name
 		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:19:22-71
 application
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:21:5-58:19
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:21:5-68:19
 MERGED from [com.github.hymanme.tagflowlayout:tagflowlayout:0.2.2] C:\Users\31663\.gradle\caches\transforms-1\files-1.1\tagflowlayout-0.2.2.aar\9ed0e915c9f26873daa90fc23aecd1fe\AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.hymanme.tagflowlayout:tagflowlayout:0.2.2] C:\Users\31663\.gradle\caches\transforms-1\files-1.1\tagflowlayout-0.2.2.aar\9ed0e915c9f26873daa90fc23aecd1fe\AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\31663\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\143320f0dcd3d0c1cb9ea9bd831e2c07\AndroidManifest.xml:11:5-15:19
@@ -131,59 +131,69 @@ MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.4] C:\Users\31663\.g
 	android:name
 		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:22:9-28
 activity#com.weike.education.model.app.SplashActivity
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:31:9-39:20
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:31:9-40:20
 	android:screenOrientation
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:33:13-49
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:34:13-49
+	android:launchMode
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:33:13-44
 	android:name
 		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:32:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:34:13-38:29
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:35:13-39:29
 action#android.intent.action.MAIN
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:35:17-68
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:36:17-68
 	android:name
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:36:25-66
 category#android.intent.category.LAUNCHER
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:37:17-76
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:38:17-76
 	android:name
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:37:27-74
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:38:27-74
 activity#com.weike.education.model.app.MainActivity
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:40:9-59
-	android:name
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:40:19-57
-activity#com.weike.education.model.app.ChoosePhaseActivity
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:41:9-66
-	android:name
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:41:19-64
-activity#com.weike.education.model.app.SectionDetailActivity
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:42:9-68
-	android:name
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:42:19-66
-activity#com.weike.education.model.mine.CacheRecordActivity
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:46:9-67
-	android:name
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:46:19-65
-service#com.weike.education.widget.NetworkService
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:48:9-57
-	android:name
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:48:18-55
-activity#com.weike.education.model.course.video.VideoPlayerActivity
-ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:50:9-57:68
-	android:screenOrientation
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:55:19-56
-	android:label
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:53:19-51
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:41:9-43:46
 	android:launchMode
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:54:19-49
-	android:windowSoftInputMode
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:57:19-66
-	android:exported
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:52:19-43
-	android:configChanges
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:51:19-119
-	android:theme
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:56:19-52
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:43:13-44
 	android:name
-		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:50:19-73
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:42:13-51
+activity#com.weike.education.model.app.ChoosePhaseActivity
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:44:9-46:46
+	android:launchMode
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:46:13-44
+	android:name
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:45:13-58
+activity#com.weike.education.model.app.SectionDetailActivity
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:47:9-49:46
+	android:launchMode
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:49:13-44
+	android:name
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:48:13-60
+activity#com.weike.education.model.mine.CacheRecordActivity
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:53:9-55:46
+	android:launchMode
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:55:13-44
+	android:name
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:54:13-59
+service#com.weike.education.widget.NetworkService
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:57:9-57
+	android:name
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:57:18-55
+activity#com.weike.education.model.course.video.VideoPlayerActivity
+ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:59:9-67:62
+	android:screenOrientation
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:65:13-50
+	android:label
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:63:13-45
+	android:launchMode
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:64:13-43
+	android:windowSoftInputMode
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:67:13-60
+	android:exported
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:62:13-37
+	android:configChanges
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:61:13-113
+	android:theme
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:66:13-46
+	android:name
+		ADDED from H:\resource\Education\app\src\main\AndroidManifest.xml:60:13-67
 uses-sdk
 INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from H:\resource\Education\app\src\main\AndroidManifest.xml

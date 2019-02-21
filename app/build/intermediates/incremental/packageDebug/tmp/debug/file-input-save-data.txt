@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Feb 21 11:52:31 CST 2019
+#Thu Feb 21 14:38:58 CST 2019
 4.path=lib/x86/libijksdl.so
 8.set=NATIVE_RESOURCE
 6.path=lib/armeabi-v7a/libijkffmpeg.so
