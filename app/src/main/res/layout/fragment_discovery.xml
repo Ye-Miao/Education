@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/fake_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusbar_view_height"
+        android:background="@color/white"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:contentInsetEnd="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:id="@+id/main_toolbar_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/toolbar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_action_down"/>
+
+
+            <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp12"
+                android:background="@drawable/main_search_background"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp2"
+                    android:drawableStart="@drawable/search_icon"
+                    android:text="@string/toolbar_search_text"
+                    android:textColor="@color/bottom_textUnSelectColor"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/discovery_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp36"
+        android:background="@color/white"
+        app:tl_indicator_corner_radius="@dimen/dp1"
+        app:tl_indicator_height="@dimen/dp2"
+        app:tl_indicator_width_equal_title="true"
+        app:tl_tab_padding="@dimen/dp14"
+        app:tl_tab_space_equal="false"
+        app:tl_textBold="BOTH"
+        app:tl_textSelectColor="@color/tab_textSelectColor"
+        app:tl_textUnselectColor="@color/tab_textUnSelectColor"
+        app:tl_textsize="@dimen/text_size_16"/>
+
+    <com.weike.education.widget.NoScrollViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:overScrollMode="never"/>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp10"
+    android:layout_marginStart="@dimen/dp10">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp20"
+        android:paddingTop="@dimen/dp20">
+
+        <ImageView
+            android:id="@+id/special_imgView"
+            android:layout_width="@dimen/dp90"
+            android:layout_height="@dimen/dp0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="2.5:3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/special_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/special_imgView"/>
+
+        <TextView
+            android:id="@+id/special_teacherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:textColor="@color/bottom_textUnSelectColor"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/special_imgView"
+            app:layout_constraintTop_toBottomOf="@+id/special_title"/>
+
+        <TextView
+            android:id="@+id/special_teacherTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/section_special_teachertag"
+            android:textColor="@color/head_special_teacherTag"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintLeft_toRightOf="@+id/special_teacherName"
+            app:layout_constraintTop_toBottomOf="@+id/special_title"/>
+
+        <TextView
+            android:id="@+id/special_content"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:letterSpacing="0.05"
+            android:lineSpacingMultiplier="1.5"
+            android:lines="2"
+            android:textColor="@color/bottom_textUnSelectColor"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/special_teacherName"
+            app:layout_constraintTop_toBottomOf="@+id/special_teacherTag"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

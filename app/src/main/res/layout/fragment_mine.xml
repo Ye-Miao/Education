@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp250"
+                android:background="@drawable/account_bg">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:lineSpacingMultiplier="1.5"
+                    android:maxEms="5"
+                    android:singleLine="true"
+                    android:text="m15622"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_24"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/user_intro"
+                    app:layout_constraintStart_toStartOf="@+id/user_intro"/>
+
+                <TextView
+                    android:id="@+id/user_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp30"
+                    android:layout_marginStart="@dimen/dp18"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:text="@string/user_intro"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintBottom_toTopOf="@+id/mine_btn"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_right"
+                    app:layout_constraintBottom_toBottomOf="@+id/user_intro"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/user_name"/>
+
+                <com.weike.education.widget.CircleImageView
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/dp72"
+                    android:layout_height="@dimen/dp72"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:src="@drawable/avatar_teacher_default"
+                    app:border_color="@color/white"
+                    app:border_width="@dimen/dp1"
+                    app:layout_constraintBottom_toBottomOf="@+id/right"
+                    app:layout_constraintEnd_toStartOf="@+id/right"
+                    app:layout_constraintTop_toTopOf="@+id/right"/>
+
+                <LinearLayout
+                    android:id="@+id/mine_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp30"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dp10"
+                        android:drawableTop="@drawable/ic_mine_address"
+                        android:gravity="center"
+                        android:text="@string/mine_address"
+                        android:textColor="@color/text_color"/>
+
+                    <TextView
+                        android:id="@+id/icon_cacheRecord"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dp10"
+                        android:drawableTop="@drawable/ic_mine_download"
+                        android:gravity="center"
+                        android:text="@string/mine_download"
+                        android:textColor="@color/text_color"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dp10"
+                        android:drawableTop="@drawable/ic_mine_key_course"
+                        android:gravity="center"
+                        android:text="@string/mine_course"
+                        android:textColor="@color/text_color"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dp10"
+                        android:drawableTop="@drawable/ic_mine_order"
+                        android:gravity="center"
+                        android:text="@string/mine_order"
+                        android:textColor="@color/text_color"/>
+
+
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <!--<GridLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"></GridLayout>-->
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/coupon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp72"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp10"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp10"
+                android:text="@string/mine_coupon"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/item_coupon_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_action_right"/>
+
+            <TextView
+                android:id="@+id/item_coupon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_toStartOf="@+id/item_coupon_right"
+                android:textColor="@color/serialType_price_color"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0.5"
+                android:layout_alignParentBottom="true"
+                android:background="@color/window_background"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/group_booking"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp72"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp10"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp10"
+                android:text="@string/mine_group_booking"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/item_group_booking_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_action_right"/>
+
+            <TextView
+                android:id="@+id/item_group_booking_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_toStartOf="@+id/item_group_booking_right"
+                android:textColor="@color/serialType_price_color"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0.5"
+                android:layout_alignParentBottom="true"
+                android:background="@color/window_background"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/counsel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp72"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp10"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp10"
+                android:text="@string/mine_counsel"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/item_counsel_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_action_right"/>
+
+            <TextView
+                android:id="@+id/item_counsel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_toStartOf="@+id/item_counsel_right"
+                android:text="@string/mine_counsel_time"
+                android:textColor="@color/bottom_textUnSelectColor"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0.5"
+                android:layout_alignParentBottom="true"
+                android:background="@color/window_background"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/service"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp72"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp10"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp10"
+                android:text="@string/mine_service"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/item_service_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_action_right"/>
+
+            <TextView
+                android:id="@+id/item_service_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_toStartOf="@+id/item_service_right"
+                android:text="@string/mine_counsel_time"
+                android:textColor="@color/bottom_textUnSelectColor"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0.5"
+                android:layout_alignParentBottom="true"
+                android:background="@color/window_background"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp72"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp10"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp10"
+                android:text="@string/mine_setting"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/item_setting_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_action_right"/>
+
+            <TextView
+                android:id="@+id/item_setting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_toStartOf="@+id/item_setting_right"
+                android:textColor="@color/serialType_price_color"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0.5"
+                android:layout_alignParentBottom="true"
+                android:background="@color/window_background"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

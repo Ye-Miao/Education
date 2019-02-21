@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="@dimen/dp4"/>
+    <padding
+        android:bottom="@dimen/dp5"
+        android:left="@dimen/dp24"
+        android:right="@dimen/dp24"
+        android:top="@dimen/dp5"/>
+    <solid android:color="@color/search_background"/>
+</shape>

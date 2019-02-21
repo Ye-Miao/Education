@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">微课</string>
+    <!--toolbar-->
+    <string name="toolbar_search_text">输入课程或则教师名字</string>
+    <string name="app_introduce">名师指导，在线授课，助你健步如飞。</string>
+    <!--head-->
+    <string name="head_loadMore">查看更多</string>
+    <string name="head_zhuanlan">名师推荐</string>
+    <string name="head_serial">系列好课</string>
+    <string name="head_course">精选好课</string>
+    <!--choose-->
+    <string name="choose_title">选择学习阶段</string>
+    <string name="choose_text">请放心选择，以后还可以更改</string>
+    <!--footer-->
+    <string name="footer">一 暂无更多数据 一</string>
+    <!--myCourse-->
+    <string name="my_course">我的课程</string>
+    <!--mine-->
+    <string name="user_intro">时光不回头，当下最重要</string>
+    <string name="mine_address">收获地址</string>
+    <string name="mine_download">缓存中心</string>
+    <string name="mine_course">我的重点</string>
+    <string name="mine_order">我的订单</string>
+    <string name="mine_coupon">我的优惠券</string>
+    <string name="mine_group_booking">我的拼团</string>
+    <string name="mine_counsel">在线咨询</string>
+    <string name="mine_service">客服热线</string>
+    <string name="mine_setting">设置</string>
+    <string name="mine_counsel_time">周一至周日 9:00–24:00</string>
+    <!--video-->
+    <string name="video_error_title">不能播放视频</string>
+    <string name="video_error_text_invalid_progressive_playback">对不起，这个视频不适合该装置的流</string>
+    <string name="video_error_text_unknown">该视频不能播放</string>
+    <string name="video_error_button">OK</string>
+</resources>

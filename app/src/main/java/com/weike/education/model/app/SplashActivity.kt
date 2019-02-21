@@ -1,0 +1,66 @@
+package com.weike.education.model.app
+
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
+import android.content.Intent
+import android.view.View
+import android.view.animation.BounceInterpolator
+import android.view.animation.DecelerateInterpolator
+import com.weike.education.R
+import com.weike.education.base.BaseActivity
+import com.weike.education.utils.StatusBarUtil
+import io.reactivex.Observable
+import kotlinx.android.synthetic.main.activity_splash.*
+import java.util.concurrent.TimeUnit
+
+/**
+ * @author: ym  作者 E-mail: 15622113269@163.com
+ * date: 2018/12/14
+ * desc:
+ */
+class SplashActivity : BaseActivity() {
+
+    override fun getLayoutId(): Int = R.layout.activity_splash
+
+    override fun initWidget() {
+        super.initWidget()
+        //设置透明
+        StatusBarUtil.setTransparent(this)
+    }
+
+    override fun loadData() {
+        super.loadData()
+        val alphaAnim = ObjectAnimator.ofFloat(txt_des, "alpha", 1f)
+        val desAnim = ObjectAnimator.ofFloat(txt_des, "translationX", -500f, 0f)
+        desAnim.duration = 700
+        desAnim.interpolator = DecelerateInterpolator()
+        desAnim.addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationStart(animation: Animator) {
+                txt_name.visibility = View.INVISIBLE
+            }
+
+            override fun onAnimationEnd(animation: Animator) {
+                txt_name.visibility = View.VISIBLE
+            }
+        })
+        val nameAnim = ObjectAnimator.ofFloat(txt_name, "translationY", -500f, 0f)
+        nameAnim.duration = 2000
+        nameAnim.interpolator = BounceInterpolator()
+        nameAnim.addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationEnd(animation: Animator) {
+                Observable.timer(500, TimeUnit.MILLISECONDS).subscribe { go2Main() }
+            }
+        })
+
+        val animSet = AnimatorSet()
+        animSet.play(desAnim).with(alphaAnim).before(nameAnim)
+        animSet.start()
+    }
+
+    private fun go2Main() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+}

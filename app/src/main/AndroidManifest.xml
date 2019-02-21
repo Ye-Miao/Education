@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.weike.education">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/BaseAppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <!--app-->
+        <activity
+            android:name=".model.app.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".model.app.MainActivity"/>
+        <activity android:name=".model.app.ChoosePhaseActivity"/>
+        <activity android:name=".model.app.SectionDetailActivity"/>
+        <!--course-->
+
+        <!--mine-->
+        <activity android:name=".model.mine.CacheRecordActivity"/>
+        <!--widget-->
+        <service android:name=".widget.NetworkService"/>
+        <!--media-->
+        <activity android:name=".model.course.video.VideoPlayerActivity"
+                  android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+                  android:exported="false"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTop"
+                  android:screenOrientation="landscape"
+                  android:theme="@style/Fullscreen"
+                  android:windowSoftInputMode="stateAlwaysHidden"/>
+    </application>
+
+
+</manifest>

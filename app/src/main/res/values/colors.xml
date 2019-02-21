@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2D3035</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="window_background">#eaeaea</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white_30">#F2F2F2</color>
+    <color name="search_background">#F3F3F3</color>
+    <color name="text_color">#353F49</color>
+    <color name="bg_green">#F9FEF8</color>
+    <color name="font_gray">#656565</color>
+    <color name="gray_light">#dcdcdc</color>
+
+    <!--bottom-->
+    <color name="bottom_color">#FCFCFC</color>
+    <color name="tab_textSelectColor">#0CB65B</color>
+    <color name="tab_textUnSelectColor">#373C40</color>
+    <color name="bottom_textUnSelectColor">#A5A9AD</color>
+    <color name="bottom_textSelectColor">#0CB65B</color>
+    <!--body-->
+    <color name="head_special_teacherTag">#AAA02D</color>
+    <color name="head_special_teacherTag_border">#E8E8D0</color>
+    <!--serial-->
+    <color name="serial_gradient_startColor">#FDFDFD</color>
+    <color name="categoryName_color">#848C97</color>
+    <color name="serialType_courseCount_stroke">#F2E6E6</color>
+    <color name="serialType_courseCount_background">#FEF6F4</color>
+    <color name="serialType_courseCount_textColor">#EDA170</color>
+    <color name="serialType_price_color">#F87D41</color>
+    <!--choose-->
+    <color name="choose_left_bg">#FDFDFD</color>
+    <color name="choose_left_bg_UnSelect">#FCFFFF</color>
+    <!--sectionTYpe-->
+    <color name="selection_type_item_head">#52A7EE</color>
+    <!--video-->
+    <color name="media_controller_bg">#99000000</color>
+</resources>

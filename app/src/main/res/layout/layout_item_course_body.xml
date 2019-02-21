@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp10"
+    android:layout_marginStart="@dimen/dp15">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp20"
+        android:paddingTop="@dimen/dp20">
+
+        <TextView
+            android:id="@+id/categoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/section_serial_categoryname"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:letterSpacing="0.05"
+            android:lineSpacingMultiplier="1.5"
+            android:maxLines="2"
+            android:textColor="@color/tab_textUnSelectColor"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/categoryName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/categoryName"
+            app:layout_constraintTop_toTopOf="@+id/categoryName"/>
+
+        <TextView
+            android:id="@+id/courseSaleTime_Num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:textColor="@color/bottom_textUnSelectColor"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+
+        <com.weike.education.widget.CircleImageView
+            android:id="@+id/iv_avatar1"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp10"
+            app:border_color="@color/white"
+            app:border_width="@dimen/dp1"
+            app:layout_constraintEnd_toEndOf="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/courseSaleTime_Num"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp2"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintTop_toBottomOf="@+id/iv_avatar1"/>
+
+
+        <com.weike.education.widget.CircleImageView
+            android:id="@+id/iv_avatar2"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
+            android:layout_marginStart="@dimen/dp20"
+            app:border_color="@color/white"
+            app:border_width="@dimen/dp1"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar1"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar1"/>
+
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp2"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintEnd_toEndOf="@+id/iv_avatar2"
+            app:layout_constraintStart_toStartOf="@+id/iv_avatar2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_avatar2"/>
+
+
+        <com.weike.education.widget.CircleImageView
+            android:id="@+id/iv_avatar3"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
+            android:layout_marginStart="@dimen/dp20"
+            app:border_color="@color/white"
+            app:border_width="@dimen/dp1"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar2"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar2"/>
+
+        <TextView
+            android:id="@+id/name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp2"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintEnd_toEndOf="@+id/iv_avatar3"
+            app:layout_constraintStart_toStartOf="@+id/iv_avatar3"
+            app:layout_constraintTop_toBottomOf="@+id/iv_avatar3"/>
+
+
+        <TextView
+            android:id="@+id/yuan"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4"
+            android:text="￥"
+            android:textColor="@color/serialType_price_color"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="@+id/price"
+            app:layout_constraintEnd_toStartOf="@+id/price"
+            app:layout_constraintTop_toTopOf="@+id/price"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:textColor="@color/serialType_price_color"
+            android:textSize="@dimen/text_size_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar3"/>
+
+        <TextView
+            android:id="@+id/saleNum"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/bottom_textUnSelectColor"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="@+id/name3"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

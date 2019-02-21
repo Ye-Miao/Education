@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar"/>
+
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        android:text="没有找到你的缓存"
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <com.weike.education.widget.NumberProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/NumberProgressBar_Beauty_Red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:progress_max="100"
+        app:progress_text_visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_cache_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintTop_toTopOf="@+id/progress_bar"
+        tools:ignore="MissingConstraints,RtlSymmetry"/>
+</android.support.constraint.ConstraintLayout>

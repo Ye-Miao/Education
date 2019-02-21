@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_close"
+        android:icon="@drawable/btn_close_choose_interested"
+        android:orderInCategory="100"
+        android:title=""
+        app:showAsAction="always"/>
+
+</menu>

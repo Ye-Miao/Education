@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="course_title">
+        <item>全部课</item>
+        <item>付费课</item>
+        <item>公开课</item>
+        <item>过期课</item>
+    </string-array>
+</resources>
