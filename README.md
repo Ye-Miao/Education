@@ -18,3 +18,19 @@ An unofficial youdao client for android
 <a href="screenshots/seven.png"><img src="screenshots/seven.png" width="90%"/></a> 
 
 
+## Thanks to the open source project
+* [RxJava](https://github.com/ReactiveX/RxJava)
+* [RxAndroid](https://github.com/ReactiveX/RxAndroid)
+* [RxBinding](https://github.com/JakeWharton/RxBinding)
+* [RxLifecycle](https://github.com/trello/RxLifecycle)
+* [okhttp](https://github.com/square/okhttp)
+* [dagger](https://github.com/square/dagger)
+* [retrofit](https://github.com/square/retrofit)
+* [BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
+* [ijkplayer](https://github.com/Bilibili/ijkplayer)
+* [glide](https://github.com/bumptech/glide)
+* [MaterialSearchView](https://github.com/MiguelCatalan/MaterialSearchView)
+* [FlycoTabLayout](https://github.com/H07000223/FlycoTabLayout)
+* [FlowLayout](https://github.com/hongyangAndroid/FlowLayout)
+* [banner](https://github.com/youth5201314/banner)
+* [MZBannerView](https://github.com/pinguo-zhouwei/MZBannerView)
