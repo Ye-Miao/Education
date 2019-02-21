@@ -37,7 +37,7 @@ An unofficial youdao client for android
 
 ## License
 
-Copyright 2018 Y
+Copyright 2018 Ye-Miao
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
