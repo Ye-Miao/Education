@@ -15,4 +15,4 @@ An unofficial youdao client for android
 <a href="screenshots/five.png"><img src="screenshots/five.png" width="30%"/></a>
 <a href="screenshots/six.png"><img src="screenshots/six.png" width="30%"/></a>
 
-<a href="screenshots/seven.png"><img src="screenshots/seven.png" width="30%"/></a> 
+<a href="screenshots/seven.png"><img src="screenshots/seven.png"/></a> 
