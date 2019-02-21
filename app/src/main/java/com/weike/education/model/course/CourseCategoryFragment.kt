@@ -21,7 +21,7 @@ class CourseCategoryFragment : BaseRefreshFragment<CourseCategoryPresenter, Vide
     private var mVideoList = ArrayList<VideoBean.Data.Video>()
     private var mAdapter: CourseCategoryAdapter? = null
 
-    
+
     override fun getLayoutId(): Int = R.layout.fragment_course_category
 
     companion object {
