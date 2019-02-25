@@ -42,7 +42,7 @@ abstract class BaseSubscriber<T>(private val view: BaseContract.BaseView?) : Res
         view?.let {
             it.complete()
             onSuccess(response)
-        } ?: return@onNext
+        } ?: return
     }
 
     override fun onError(e: Throwable) {

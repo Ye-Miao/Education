@@ -4,6 +4,7 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.View
 import android.view.animation.BounceInterpolator
@@ -22,6 +23,10 @@ import java.util.concurrent.TimeUnit
  */
 class SplashActivity : BaseActivity() {
 
+    private var alphaAnim: ObjectAnimator? = null
+    private var desAnim: ObjectAnimator? = null
+    private var nameAnim: ObjectAnimator? = null
+
     override fun getLayoutId(): Int = R.layout.activity_splash
 
     override fun initWidget() {
@@ -32,11 +37,11 @@ class SplashActivity : BaseActivity() {
 
     override fun loadData() {
         super.loadData()
-        val alphaAnim = ObjectAnimator.ofFloat(txt_des, "alpha", 1f)
-        val desAnim = ObjectAnimator.ofFloat(txt_des, "translationX", -500f, 0f)
-        desAnim.duration = 700
-        desAnim.interpolator = DecelerateInterpolator()
-        desAnim.addListener(object : AnimatorListenerAdapter() {
+        alphaAnim = ObjectAnimator.ofFloat(txt_des, "alpha", 1f)
+        desAnim = ObjectAnimator.ofFloat(txt_des, "translationX", -500f, 0f)
+        desAnim?.duration = 700
+        desAnim?.interpolator = DecelerateInterpolator()
+        desAnim?.addListener(object : AnimatorListenerAdapter() {
             override fun onAnimationStart(animation: Animator) {
                 txt_name.visibility = View.INVISIBLE
             }
@@ -45,10 +50,11 @@ class SplashActivity : BaseActivity() {
                 txt_name.visibility = View.VISIBLE
             }
         })
-        val nameAnim = ObjectAnimator.ofFloat(txt_name, "translationY", -500f, 0f)
-        nameAnim.duration = 2000
-        nameAnim.interpolator = BounceInterpolator()
-        nameAnim.addListener(object : AnimatorListenerAdapter() {
+        nameAnim = ObjectAnimator.ofFloat(txt_name, "translationY", -500f, 0f)
+        nameAnim?.duration = 2000
+        nameAnim?.interpolator = BounceInterpolator()
+        nameAnim?.addListener(object : AnimatorListenerAdapter() {
+            @SuppressLint("CheckResult")
             override fun onAnimationEnd(animation: Animator) {
                 Observable.timer(500, TimeUnit.MILLISECONDS).subscribe { go2Main() }
             }
@@ -62,5 +68,12 @@ class SplashActivity : BaseActivity() {
     private fun go2Main() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        alphaAnim?.cancel()
+        desAnim?.cancel()
+        nameAnim?.cancel()
     }
 }

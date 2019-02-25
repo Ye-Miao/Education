@@ -87,7 +87,7 @@ class App : Application() {
      */
     fun addActivity(act: Activity) {
         if (allActivities == null) {
-            allActivities = HashSet<Activity>()
+            allActivities = HashSet()
         } else {
             allActivities?.add(act)
         }
