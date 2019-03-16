@@ -16,9 +16,9 @@ import kotlinx.android.synthetic.main.choose_left_item.view.*
 class ChoosePhaseAdapter(layoutId: Int, mData: List<DiscoveryCommentBean.Data.Stages.SubTag>?) : BaseQuickAdapter<DiscoveryCommentBean.Data.Stages.SubTag, BaseViewHolder>(layoutId, mData) {
     var selectedPosition: Int = -1
 
-    override fun convert(helper: BaseViewHolder?, item: DiscoveryCommentBean.Data.Stages.SubTag?) {
-        helper?.apply {
-            item?.let {
+    override fun convert(helper: BaseViewHolder, item: DiscoveryCommentBean.Data.Stages.SubTag) {
+        helper.apply {
+            item.let {
                 setText(R.id.left_text, item.tagName)
                 addOnClickListener(R.id.left_item)
                 if (adapterPosition == selectedPosition) {

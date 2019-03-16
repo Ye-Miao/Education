@@ -12,6 +12,6 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int ijkplayer_dummy = 0x7f0e0030;
+        public static final int ijkplayer_dummy = 0x7f0f003e;
     }
 }

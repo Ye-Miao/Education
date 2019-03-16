@@ -14,9 +14,9 @@ import com.weike.education.bean.app.VerticalBean
  *
  */
 class SectionTypeSubTagAdapter(list: List<VerticalBean.Data.SubTag>?) : BaseQuickAdapter<VerticalBean.Data.SubTag, BaseViewHolder>(R.layout.item_section_type_subtag, list) {
-    override fun convert(helper: BaseViewHolder?, item: VerticalBean.Data.SubTag?) {
-        helper?.apply {
-            item?.let {
+    override fun convert(helper: BaseViewHolder, item: VerticalBean.Data.SubTag) {
+        helper.apply {
+            item.let {
                 setText(R.id.tv_title, item.name)
                 Glide.with(mContext)
                         .load(item.icon)

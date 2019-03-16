@@ -20,18 +20,18 @@ import jp.wasabeef.glide.transformations.RoundedCornersTransformation
  */
 class SectionSpecial(list: List<SelectionBean.Data.Zhuanlan>?) : StatelessSection<SelectionBean.Data.Zhuanlan>(R.layout.layout_item_section_head, R.layout.layout_item_special_body, list) {
 
-    override fun convert(holder: ViewHolder?, zhuanlan: SelectionBean.Data.Zhuanlan?, position: Int) {
-        holder?.apply {
-            zhuanlan?.let {
+    override fun convert(holder: ViewHolder, zhuanlan: SelectionBean.Data.Zhuanlan, position: Int) {
+        holder.apply {
+            zhuanlan.let {
                 if (position != 0) getView<ConstraintLayout>(R.id.item).setBackgroundResource(R.drawable.ic_bottom_lines)
 
-                setText(R.id.special_title, zhuanlan.title)
-                setText(R.id.special_teacherName, zhuanlan.teacherName)
-                setText(R.id.special_teacherTag, zhuanlan.teacherTag)
-                setText(R.id.special_content, zhuanlan.introduction)
+                setText(R.id.special_title, it.title)
+                setText(R.id.special_teacherName, it.teacherName)
+                setText(R.id.special_teacherTag, it.teacherTag)
+                setText(R.id.special_content, it.introduction)
 
                 Glide.with(mContext)
-                        .load(zhuanlan.img)
+                        .load(it.img)
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .bitmapTransform(RoundedCornersTransformation(mContext, 5, 0))
                         .into(getView(R.id.special_imgView))

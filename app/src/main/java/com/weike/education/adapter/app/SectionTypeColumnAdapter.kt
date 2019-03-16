@@ -14,9 +14,9 @@ import com.weike.education.bean.app.VerticalBean
  *
  */
 class SectionTypeColumnAdapter(data: List<VerticalBean.Data.Column.CourseCard.Teacher>?) : BaseQuickAdapter<VerticalBean.Data.Column.CourseCard.Teacher, BaseViewHolder>(R.layout.section_serial_head_portrait, data) {
-    override fun convert(helper: BaseViewHolder?, item: VerticalBean.Data.Column.CourseCard.Teacher?) {
-        helper?.apply {
-            item?.let {
+    override fun convert(helper: BaseViewHolder, item: VerticalBean.Data.Column.CourseCard.Teacher) {
+        helper.apply {
+            item.let {
                 setText(R.id.name, item.name)
                 Glide.with(mContext)
                         .load(item.imgUrl)

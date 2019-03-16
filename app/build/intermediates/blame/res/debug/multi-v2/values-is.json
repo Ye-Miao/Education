@@ -1,20 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "H:\\resource\\Education\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-is\\values-is.xml",
+            "outputFile": "I:\\resource\\Education\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-is\\values-is.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\31663\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6a93325a296d3a0004e106b759d0163c\\res\\values-is\\values-is.xml",
+                    "source": "C:\\Users\\31663\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7418903f4e72fa39fc866e300a2acf1f\\res\\values-is\\values-is.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,205,302,414,499,600,714,794,874,955,1065,1173,1271,1380,1479,1582,1737,1835",
-                        "endColumns": "99,96,111,84,100,113,79,79,80,109,107,97,108,98,102,154,97,80",
-                        "endOffsets": "200,297,409,494,595,709,789,869,950,1060,1168,1266,1375,1474,1577,1732,1830,1911"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,205,302,414,499,600,714,794,874,965,1058,1154,1248,1355,1448,1543,1638,1729,1823,1904,2014,2122,2220,2329,2428,2531,2686,2784",
+                        "endColumns": "99,96,111,84,100,113,79,79,90,92,95,93,106,92,94,94,90,93,80,109,107,97,108,98,102,154,97,80",
+                        "endOffsets": "200,297,409,494,595,709,789,869,960,1053,1149,1243,1350,1443,1538,1633,1724,1818,1899,2009,2117,2215,2324,2423,2526,2681,2779,2860"
                     }
                 },
                 {
-                    "source": "C:\\Users\\31663\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a1cb4695fc21d9a8a7ee51e06c999b69\\res\\values-is\\values-is.xml",
+                    "source": "C:\\Users\\31663\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e9181ca1a328c31a470b9557527704c2\\res\\values-is\\values-is.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,11 +23,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "20",
+                        "startLines": "30",
                         "startColumns": "4",
-                        "startOffsets": "1916",
+                        "startOffsets": "2865",
                         "endColumns": "100",
-                        "endOffsets": "2012"
+                        "endOffsets": "2961"
                     }
                 }
             ]

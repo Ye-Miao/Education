@@ -16,15 +16,13 @@ import com.weike.education.widget.section.ViewHolder
  */
 class SectionTypeSubTag(private val list: List<VerticalBean.Data.SubTag>?) : StatelessSection<Nothing>(R.layout.layout_item_section_type_subtag, R.layout.layout_empty) {
 
-    override fun onBindHeaderViewHolder(holder: ViewHolder?) {
-        holder?.let {
-            with(it){
-                val recyclerView = holder.getView<RecyclerView>(R.id.recycler)
-                recyclerView.setHasFixedSize(true)
-                val mLayoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL)
-                recyclerView.layoutManager = mLayoutManager
-                recyclerView.adapter = SectionTypeSubTagAdapter(list)
-            }
+    override fun onBindHeaderViewHolder(holder: ViewHolder) {
+        holder.let {
+            val recyclerView = it.getView<RecyclerView>(R.id.recycler)
+            recyclerView.setHasFixedSize(true)
+            val mLayoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL)
+            recyclerView.layoutManager = mLayoutManager
+            recyclerView.adapter = SectionTypeSubTagAdapter(list)
         }
     }
 }

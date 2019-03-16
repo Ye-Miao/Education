@@ -16,9 +16,9 @@ import com.zhouwei.mzbanner.MZBannerView
  */
 class SectionBanner(private val list: List<SelectionBean.Data.Head>?) : StatelessSection<Nothing>(R.layout.layout_banner, R.layout.layout_empty) {
 
-    override fun onBindHeaderViewHolder(holder: ViewHolder?) {
+    override fun onBindHeaderViewHolder(holder: ViewHolder) {
         val urls = list?.map { it.img }
-        val mMZBanner = holder?.itemView?.findViewById(R.id.banner) as MZBannerView<String>
+        val mMZBanner = holder.itemView.findViewById(R.id.banner) as MZBannerView<String>
         // 设置数据
         mMZBanner.setPages(urls) {
             BannerViewHolder()
