@@ -21,7 +21,7 @@ class MainPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHel
 
     override fun getRegionTagTypeBean(tagId: ArrayList<Int>) {
         addSubscribe(mRetrofitHelper.getDiscoveryComment()
-                .flatMap { it ->
+                .flatMap {
                     mView?.showDiscoveryBean(it)
                     val map = HashMap<String, Any>()
                     map["tags"] = tagId

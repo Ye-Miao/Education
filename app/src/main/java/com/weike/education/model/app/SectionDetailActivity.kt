@@ -32,10 +32,6 @@ class SectionDetailActivity : BaseInjectActivity<SectionDetailPresenter>(), Sect
         initWebView()
     }
 
-    override fun loadData() {
-
-    }
-
     internal inner class WebClientBase : WebViewClient() {
 
         override fun onPageFinished(webView: WebView, s: String) {

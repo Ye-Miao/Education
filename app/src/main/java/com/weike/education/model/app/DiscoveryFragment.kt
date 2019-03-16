@@ -45,7 +45,7 @@ class DiscoveryFragment : BaseFragment() {
     override fun initVariables() {
         arguments?.let {
             mStagesType = it.getParcelable<Parcelable>(Constants.EXTRA_DISCOVERY) as TagBean
-            numbers = it.getIntegerArrayList(Constants.EXTRA_NEXTLIST)
+            numbers = it.getIntegerArrayList(Constants.EXTRA_NEXTLIST)!!
             title = it.getString(Constants.EXTRA_TITLE)
         }
         toolbar_text.text = title
