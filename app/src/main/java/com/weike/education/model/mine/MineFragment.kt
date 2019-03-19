@@ -22,18 +22,18 @@ class MineFragment : BaseInjectFragment<MinePresenter>(), MineContract.View {
 
     override fun getLayoutId(): Int = R.layout.fragment_mine
 
-    companion object {
-        fun newInstance(): MineFragment {
-            return MineFragment()
-        }
-    }
-
     override fun initPresenter() = mPresenter.attachView(this)
 
     override fun initInject() = fragmentComponent.inject(this)
 
     override fun loadData() {
         // mPresenter.getMine()
+    }
+
+    companion object {
+        fun newInstance(): MineFragment {
+            return MineFragment()
+        }
     }
 
     override fun initVariables() {

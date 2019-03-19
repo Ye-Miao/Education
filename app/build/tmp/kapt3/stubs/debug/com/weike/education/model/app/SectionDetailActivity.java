@@ -8,7 +8,7 @@ import java.lang.System;
  * * desc:
  * *
  */
-@kotlin.Metadata(mv = {1, 1, 10}, bv = {1, 0, 2}, k = 1, d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0002\u000f\u0010B\u0005\u00a2\u0006\u0002\u0010\u0004J\b\u0010\u0007\u001a\u00020\bH\u0016J\b\u0010\t\u001a\u00020\nH\u0016J\b\u0010\u000b\u001a\u00020\nH\u0016J\b\u0010\f\u001a\u00020\nH\u0003J\b\u0010\r\u001a\u00020\nH\u0016J\b\u0010\u000e\u001a\u00020\nH\u0016R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0011"}, d2 = {"Lcom/weike/education/model/app/SectionDetailActivity;", "Lcom/weike/education/base/BaseInjectActivity;", "Lcom/weike/education/mvp/presenter/app/SectionDetailPresenter;", "Lcom/weike/education/mvp/contract/app/SectionDetailContract$View;", "()V", "mUrl", "", "getLayoutId", "", "initInject", "", "initPresenter", "initWebView", "initWidget", "loadData", "WebClient", "WebClientBase", "app_debug"})
+@kotlin.Metadata(mv = {1, 1, 10}, bv = {1, 0, 2}, k = 1, d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0006\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0002\u000e\u000fB\u0005\u00a2\u0006\u0002\u0010\u0004J\b\u0010\u0007\u001a\u00020\bH\u0016J\b\u0010\t\u001a\u00020\nH\u0016J\b\u0010\u000b\u001a\u00020\nH\u0016J\b\u0010\f\u001a\u00020\nH\u0003J\b\u0010\r\u001a\u00020\nH\u0016R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0010"}, d2 = {"Lcom/weike/education/model/app/SectionDetailActivity;", "Lcom/weike/education/base/BaseInjectActivity;", "Lcom/weike/education/mvp/presenter/app/SectionDetailPresenter;", "Lcom/weike/education/mvp/contract/app/SectionDetailContract$View;", "()V", "mUrl", "", "getLayoutId", "", "initInject", "", "initPresenter", "initWebView", "initWidget", "WebClient", "WebClientBase", "app_debug"})
 public final class SectionDetailActivity extends com.weike.education.base.BaseInjectActivity<com.weike.education.mvp.presenter.app.SectionDetailPresenter> implements com.weike.education.mvp.contract.app.SectionDetailContract.View {
     private java.lang.String mUrl;
     private java.util.HashMap _$_findViewCache;
@@ -28,10 +28,6 @@ public final class SectionDetailActivity extends com.weike.education.base.BaseIn
     
     @java.lang.Override()
     public void initWidget() {
-    }
-    
-    @java.lang.Override()
-    public void loadData() {
     }
     
     @android.annotation.SuppressLint(value = {"SetJavaScriptEnabled"})

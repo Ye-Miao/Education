@@ -39,6 +39,10 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
 
     override fun getLayoutId(): Int = R.layout.activity_main
 
+    override fun initInject() = activityComponent.inject(this)
+
+    override fun initPresenter() = mPresenter.attachView(this)
+
     override fun initWidget() {
         super.initWidget()
         StatusBarUtil.setTranslucentForImageView(this, 0, null)
@@ -50,10 +54,6 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
         bottom_main.setTabData(mTabEntities)
         bottom_main.setOnTabSelectListener(this)
     }
-
-    override fun initInject() = activityComponent.inject(this)
-
-    override fun initPresenter() = mPresenter.attachView(this)
 
     override fun loadData() {
         numbers.add(432)

@@ -24,6 +24,12 @@ class CourseCategoryFragment : BaseRefreshFragment<CourseCategoryPresenter, Vide
 
     override fun getLayoutId(): Int = R.layout.fragment_course_category
 
+    override fun initPresenter() = mPresenter.attachView(this)
+
+    override fun initInject() = fragmentComponent.inject(this)
+
+    override fun lazyLoadData() = mPresenter.getVideo()
+
     companion object {
         fun newInstance(id: Int): CourseCategoryFragment {
             val fragment = CourseCategoryFragment()
@@ -33,12 +39,6 @@ class CourseCategoryFragment : BaseRefreshFragment<CourseCategoryPresenter, Vide
             return fragment
         }
     }
-
-    override fun initPresenter() = mPresenter.attachView(this)
-
-    override fun initInject() = fragmentComponent.inject(this)
-
-    override fun lazyLoadData() = mPresenter.getVideo()
 
     override fun initRecyclerView() {
         mAdapter = CourseCategoryAdapter(mVideoList)

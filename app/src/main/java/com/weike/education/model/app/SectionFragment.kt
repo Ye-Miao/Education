@@ -29,17 +29,17 @@ class SectionFragment : BaseRefreshFragment<SelectionPresenter, SelectionBean>()
 
     override fun getLayoutId(): Int = R.layout.fragment_selection
 
-    companion object {
-        fun newInstance(): SectionFragment {
-            return SectionFragment()
-        }
-    }
-
     override fun initPresenter() = mPresenter.attachView(this)
 
     override fun initInject() = fragmentComponent.inject(this)
 
     override fun lazyLoadData() = mPresenter.getSelection()
+
+    companion object {
+        fun newInstance(): SectionFragment {
+            return SectionFragment()
+        }
+    }
 
     override fun initRecyclerView() {
         mSectionedAdapter = SectionedRVAdapter()

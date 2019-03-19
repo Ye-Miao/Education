@@ -29,6 +29,12 @@ class SectionTypeFragment : BaseRefreshFragment<SelectionTypePresenter, Vertical
 
     override fun getLayoutId(): Int = R.layout.fragment_selection_type
 
+    override fun initInject() = fragmentComponent.inject(this)
+
+    override fun initPresenter() = mPresenter.attachView(this)
+
+    override fun lazyLoadData() = mPresenter.getVertical(mTid)
+
     companion object {
         fun newInstance(tid: Int): SectionTypeFragment {
             val fragment = SectionTypeFragment()
@@ -44,12 +50,6 @@ class SectionTypeFragment : BaseRefreshFragment<SelectionTypePresenter, Vertical
             mTid = it.getInt(Constants.EXTRA_TID)
         }
     }
-
-    override fun initInject() = fragmentComponent.inject(this)
-
-    override fun initPresenter() = mPresenter.attachView(this)
-
-    override fun lazyLoadData() = mPresenter.getVertical(mTid)
 
     override fun clear() {
         mHeaderList.clear()
