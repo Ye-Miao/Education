@@ -34,8 +34,8 @@ class VideoPlayerActivity : BaseActivity(), VideoBackListener {
     private var audioManager: AudioManager? = null
     //屏幕当前亮度百分比
     private var currentF = 0f
-    private var mUrl = ""
-    private var mTitle = ""
+    private var mUrl: String? = ""
+    private var mTitle: String? = ""
     private var mGestureDetector: GestureDetector? = null
     private var mMediaController: MediaController? = null
     private var mMaxVolume: Int = 0
