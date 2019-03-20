@@ -45,7 +45,9 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
 
     override fun initWidget() {
         super.initWidget()
+        //作用：我的账户的状态栏延伸至最顶部
         StatusBarUtil.setTranslucentForImageView(this, 0, null)
+        //StatusBarUtil.setColorNoTranslucent(this,AppUtils.getColor(R.color.white))
         StatusBarUtil.setLightMode(this)
         //底部tab
         mTabEntities.add(TabEntity("发现课程", R.drawable.tab_discover_checked, R.drawable.tab_discover))
