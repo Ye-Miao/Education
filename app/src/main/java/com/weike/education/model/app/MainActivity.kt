@@ -68,13 +68,13 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
         val hostObject = JsonParser().parse(Gson().toJson(stages)).asJsonObject
         var nextId: String? = null
         var result = JsonObject()
-        loop@ for (stages in stages.`154271985`.subTags) {
+        for (stages in stages.`154271985`.subTags) {
             if (numbers[0] == stages.tagId) {
                 nextId = stages.nextStage
-                break@loop
+                break
             }
         }
-        loop@ for (article in hostObject.keySet()) {
+        for (article in hostObject.keySet()) {
             if (nextId == article) {
                 val json = hostObject.getAsJsonObject(article)
                 val mSubTags = Gson().fromJson(json, TagBean::class.java)
@@ -82,7 +82,7 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
                     if (numbers[1] == tag.tagId) {
                         title = tag.tagName
                         result = hostObject.getAsJsonObject(tag.nextStage)
-                        break@loop
+                        break
                     }
                 }
             }
