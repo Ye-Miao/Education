@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Mar 28 16:43:10 CST 2019
+#Thu Mar 28 17:08:33 CST 2019
 4.path=lib/armeabi/libijkplayer.so
 8.set=NATIVE_RESOURCE
 6.path=lib/armeabi-v7a/libijksdl.so
