@@ -14,14 +14,17 @@ import javax.inject.Inject
  * desc: 精选界面-SelectionPresenter
  *
  */
-class SelectionPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) : RxPresenter<SelectionContract.View>(), SelectionContract.Presenter<SelectionContract.View> {
+class SelectionPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) :
+        RxPresenter<SelectionContract.View>(), SelectionContract.Presenter<SelectionContract.View> {
+
     override fun getSelection() {
-        addSubscribe(mRetrofitHelper.getSelection()
+        val subscriber = mRetrofitHelper.getSelection()
                 .compose(rxSchedulerHelper())
                 .subscribeWith(object : BaseSubscriber<SelectionBean>(mView) {
                     override fun onSuccess(mData: SelectionBean) {
                         mView?.showSelection(mData)
                     }
-                }))
+                })
+        addSubscribe(subscriber)
     }
 }

@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_section_detail.*
  */
 class SectionDetailActivity : BaseInjectActivity<SectionDetailPresenter>(), SectionDetailContract.View {
 
-    private var mUrl: String? = "https://ke.youdao.com/course/detail/18906?inLoc=fp_h_0&Pdt=CourseWeb"
+    private var mUrl = "https://ke.youdao.com/course/detail/18906?inLoc=fp_h_0&Pdt=CourseWeb"
 
     override fun getLayoutId(): Int = R.layout.activity_section_detail
 

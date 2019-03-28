@@ -47,7 +47,7 @@ abstract class BaseRefreshFragment<T : BaseContract.BasePresenter<*>, K> : BaseI
     }
 
     override fun lazyLoad() {
-        if (!mIsPrepared || !mIsVisible) return@lazyLoad
+        if (!mIsPrepared || !mIsVisible) return
         initRefreshLayout()
         initRecyclerView()
         mRefresh ?: lazyLoadData()

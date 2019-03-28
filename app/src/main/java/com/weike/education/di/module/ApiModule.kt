@@ -31,9 +31,7 @@ class ApiModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient? {
-        return OkHttpHelper.instance?.okHttpClient
-    }
+    fun provideOkHttpClient(): OkHttpClient = OkHttpHelper.getOkHttpClient()
 
     @Provides
     @Singleton

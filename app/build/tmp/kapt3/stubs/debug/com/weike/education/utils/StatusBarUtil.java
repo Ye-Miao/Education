@@ -17,8 +17,8 @@ public final class StatusBarUtil {
     /**
      * * 设置状态栏颜色
      *     *
-     *     * @param activity       需要设置的activity
-     *     * @param color          状态栏颜色值
+     *     * @param activity 需要设置的activity
+     *     * @param color 状态栏颜色值
      *     * @param statusBarAlpha 状态栏透明度
      */
     public final void setColor(@org.jetbrains.annotations.NotNull()
@@ -30,8 +30,8 @@ public final class StatusBarUtil {
     /**
      * * 设置状态栏颜色
      *     *
-     *     * @param activity       需要设置的activity
-     *     * @param color          状态栏颜色值
+     *     * @param activity 需要设置的activity
+     *     * @param color 状态栏颜色值
      *     * @param statusBarAlpha 状态栏透明度
      */
     public final void setColor(@org.jetbrains.annotations.NotNull()
@@ -42,8 +42,8 @@ public final class StatusBarUtil {
     /**
      * * 为滑动返回界面设置状态栏颜色
      *     *
-     *     * @param activity       需要设置的activity
-     *     * @param color          状态栏颜色值
+     *     * @param activity 需要设置的activity
+     *     * @param color 状态栏颜色值
      *     * @param statusBarAlpha 状态栏透明度
      */
     public final void setColorForSwipeBack(@org.jetbrains.annotations.NotNull()
@@ -55,8 +55,8 @@ public final class StatusBarUtil {
     /**
      * * 为滑动返回界面设置状态栏颜色
      *     *
-     *     * @param activity       需要设置的activity
-     *     * @param color          状态栏颜色值
+     *     * @param activity 需要设置的activity
+     *     * @param color 状态栏颜色值
      *     * @param statusBarAlpha 状态栏透明度
      */
     public final void setColorForSwipeBack(@org.jetbrains.annotations.NotNull()
@@ -68,7 +68,7 @@ public final class StatusBarUtil {
      * * 设置状态栏纯色 不加半透明效果
      *     *
      *     * @param activity 需要设置的 activity
-     *     * @param color    状态栏颜色值
+     *     * @param color 状态栏颜色值
      */
     public final void setColorNoTranslucent(@org.jetbrains.annotations.NotNull()
     android.app.Activity activity, @android.support.annotation.ColorInt()
@@ -79,7 +79,7 @@ public final class StatusBarUtil {
      * * 设置状态栏颜色(5.0以下无半透明效果,不建议使用)
      *     *
      *     * @param activity 需要设置的 activity
-     *     * @param color    状态栏颜色值
+     *     * @param color 状态栏颜色值
      */
     public final void setColorDiff(@org.jetbrains.annotations.NotNull()
     android.app.Activity activity, @android.support.annotation.ColorInt()
@@ -92,7 +92,7 @@ public final class StatusBarUtil {
      *     *
      *     * 适用于图片作为背景的界面,此时需要图片填充到状态栏
      *     *
-     *     * @param activity       需要设置的activity
+     *     * @param activity 需要设置的activity
      *     * @param statusBarAlpha 状态栏透明度
      */
     public final void setTranslucent(@org.jetbrains.annotations.NotNull()
@@ -106,7 +106,7 @@ public final class StatusBarUtil {
      *     *
      *     * 适用于图片作为背景的界面,此时需要图片填充到状态栏
      *     *
-     *     * @param activity       需要设置的activity
+     *     * @param activity 需要设置的activity
      *     * @param statusBarAlpha 状态栏透明度
      */
     public final void setTranslucent(@org.jetbrains.annotations.NotNull()
@@ -119,7 +119,7 @@ public final class StatusBarUtil {
      *     *
      *     * 适用于图片作为背景的界面,此时需要图片填充到状态栏
      *     *
-     *     * @param activity       需要设置的activity
+     *     * @param activity 需要设置的activity
      *     * @param statusBarAlpha 状态栏透明度
      */
     public final void setTranslucentForCoordinatorLayout(@org.jetbrains.annotations.NotNull()
@@ -151,7 +151,7 @@ public final class StatusBarUtil {
     /**
      * * 为头部是 ImageView 的界面设置状态栏全透明
      *     *
-     *     * @param activity       需要设置的activity
+     *     * @param activity 需要设置的activity
      *     * @param needOffsetView 需要向下偏移的 View
      */
     public final void setTransparentForImageView(@org.jetbrains.annotations.NotNull()
@@ -162,7 +162,7 @@ public final class StatusBarUtil {
     /**
      * * 为头部是 ImageView 的界面设置状态栏透明(使用默认透明度)
      *     *
-     *     * @param activity       需要设置的activity
+     *     * @param activity 需要设置的activity
      *     * @param needOffsetView 需要向下偏移的 View
      */
     public final void setTranslucentForImageView(@org.jetbrains.annotations.NotNull()
@@ -173,7 +173,7 @@ public final class StatusBarUtil {
     /**
      * * 为头部是 ImageView 的界面设置状态栏透明
      *     *
-     *     * @param activity       需要设置的activity
+     *     * @param activity 需要设置的activity
      *     * @param statusBarAlpha 状态栏透明度
      *     * @param needOffsetView 需要向下偏移的 View
      */
@@ -186,7 +186,7 @@ public final class StatusBarUtil {
     /**
      * * 为 fragment 头部是 ImageView 的设置状态栏透明
      *     *
-     *     * @param activity       fragment 对应的 activity
+     *     * @param activity fragment 对应的 activity
      *     * @param needOffsetView 需要向下偏移的 View
      */
     public final void setTranslucentForImageViewInFragment(@org.jetbrains.annotations.NotNull()
@@ -197,7 +197,7 @@ public final class StatusBarUtil {
     /**
      * * 为 fragment 头部是 ImageView 的设置状态栏透明
      *     *
-     *     * @param activity       fragment 对应的 activity
+     *     * @param activity fragment 对应的 activity
      *     * @param needOffsetView 需要向下偏移的 View
      */
     public final void setTransparentForImageViewInFragment(@org.jetbrains.annotations.NotNull()
@@ -208,7 +208,7 @@ public final class StatusBarUtil {
     /**
      * * 为 fragment 头部是 ImageView 的设置状态栏透明
      *     *
-     *     * @param activity       fragment 对应的 activity
+     *     * @param activity fragment 对应的 activity
      *     * @param statusBarAlpha 状态栏透明度
      *     * @param needOffsetView 需要向下偏移的 View
      */
@@ -262,7 +262,7 @@ public final class StatusBarUtil {
     /**
      * * 添加半透明矩形条
      *     *
-     *     * @param activity       需要设置的 activity
+     *     * @param activity 需要设置的 activity
      *     * @param statusBarAlpha 透明值
      */
     private final void addTranslucentView(android.app.Activity activity, @android.support.annotation.IntRange(from = 0L, to = 255L)
@@ -273,8 +273,8 @@ public final class StatusBarUtil {
      * * 生成一个和状态栏大小相同的半透明矩形条
      *     *
      *     * @param activity 需要设置的activity
-     *     * @param color    状态栏颜色值
-     *     * @param alpha    透明值
+     *     * @param color 状态栏颜色值
+     *     * @param alpha 透明值
      *     * @return 状态栏矩形条
      */
     private final android.view.View createStatusBarView(android.app.Activity activity, @android.support.annotation.ColorInt()

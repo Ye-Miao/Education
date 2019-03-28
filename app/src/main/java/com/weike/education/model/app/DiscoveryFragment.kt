@@ -25,9 +25,7 @@ class DiscoveryFragment : BaseFragment() {
     private var numbers = ArrayList<Int>()
     private var title: String? = null
 
-    override fun getLayoutId(): Int {
-        return R.layout.fragment_discovery
-    }
+    override fun getLayoutId(): Int = R.layout.fragment_discovery
 
     companion object {
         fun newInstance(mSubTag: TagBean?, numbers: ArrayList<Int>?, title: String?): DiscoveryFragment {

@@ -25,10 +25,6 @@ class MineFragment : BaseInjectFragment<MinePresenter>(), MineContract.View {
 
     override fun initInject() = fragmentComponent.inject(this)
 
-    override fun loadData() {
-        // mPresenter.getMine()
-    }
-
     companion object {
         fun newInstance(): MineFragment {
             return MineFragment()

@@ -14,14 +14,17 @@ import javax.inject.Inject
  * desc: 标签界面
  *
  */
-class SelectionTypePresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) : RxPresenter<SelectionTypeContract.View>(), SelectionTypeContract.Presenter<SelectionTypeContract.View> {
+class SelectionTypePresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) :
+        RxPresenter<SelectionTypeContract.View>(), SelectionTypeContract.Presenter<SelectionTypeContract.View> {
+
     override fun getVertical(tag: Int) {
-        addSubscribe(mRetrofitHelper.getVertical(tag)
+        val subscriber = mRetrofitHelper.getVertical(tag)
                 .compose(rxSchedulerHelper())
                 .subscribeWith(object : BaseSubscriber<VerticalBean>(mView) {
                     override fun onSuccess(mData: VerticalBean) {
                         mView?.showVertical(mData)
                     }
-                }))
+                })
+        addSubscribe(subscriber)
     }
 }

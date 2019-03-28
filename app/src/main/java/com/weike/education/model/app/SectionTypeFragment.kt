@@ -21,7 +21,7 @@ import com.weike.education.widget.section.SectionedRVAdapter
  */
 class SectionTypeFragment : BaseRefreshFragment<SelectionTypePresenter, VerticalBean>(), SelectionTypeContract.View {
 
-    private var mTid: Int = 0
+    private var mTid = 0
     private val mHeaderList = ArrayList<VerticalBean.Data.Banner>() // 顶部Banner
     private val mSubTagList = ArrayList<VerticalBean.Data.SubTag>() // 顶部tab列表
     private val mColumnList = ArrayList<VerticalBean.Data.Column>() // 列表item内容

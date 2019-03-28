@@ -19,7 +19,7 @@ interface MainContract {
         fun showSetTag(tagSuccessBean: TagSuccessBean)
     }
 
-    interface Presenter<T> : BaseContract.BasePresenter<T> {
+    interface Presenter<in T> : BaseContract.BasePresenter<T> {
 
         /**
          * @param tagId [所处阶段Id,阶段对应级别（如初中->初一、初二、初三）]

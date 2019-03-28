@@ -15,7 +15,7 @@ interface SelectionContract {
         fun showSelection(selectionBean: SelectionBean)
     }
 
-    interface Presenter<T> : BaseContract.BasePresenter<T> {
+    interface Presenter<in T> : BaseContract.BasePresenter<T> {
         fun getSelection()
     }
 }

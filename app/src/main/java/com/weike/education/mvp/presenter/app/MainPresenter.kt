@@ -19,7 +19,7 @@ class MainPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHel
         RxPresenter<MainContract.View>(), MainContract.Presenter<MainContract.View> {
 
     override fun getRegionTagTypeBean(tagId: ArrayList<Int>) {
-        addSubscribe(mRetrofitHelper.getDiscoveryComment()
+        val subscriber = mRetrofitHelper.getDiscoveryComment()
                 .flatMap {
                     mView?.showDiscoveryBean(it)
                     val map = HashMap<String, Any>()
@@ -31,6 +31,7 @@ class MainPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHel
                     override fun onSuccess(mData: TagSuccessBean) {
                         mView?.showSetTag(mData)
                     }
-                }))
+                })
+        addSubscribe(subscriber)
     }
 }

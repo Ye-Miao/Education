@@ -29,11 +29,7 @@ class SplashActivity : BaseActivity() {
 
     override fun getLayoutId(): Int = R.layout.activity_splash
 
-    override fun initWidget() {
-        super.initWidget()
-        // 设置透明
-        StatusBarUtil.setTransparent(this)
-    }
+    override fun initWidget() = StatusBarUtil.setTransparent(this)
 
     override fun loadData() {
         super.loadData()

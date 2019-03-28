@@ -14,7 +14,7 @@ interface MineContract {
         fun showMine(mineBean: MineBean)
     }
 
-    interface Presenter<T> : BaseContract.BasePresenter<T> {
+    interface Presenter<in T> : BaseContract.BasePresenter<T> {
         fun getMine()
     }
 }

@@ -13,11 +13,11 @@ import dagger.Provides
  * desc: Activity模型
  */
 @Module
-class ActivityModule(val mActivity: Activity) {
+class ActivityModule(val activity: Activity) {
 
     @Provides
     @ActivityScope
     fun provideActivity(): Activity {
-        return mActivity
+        return activity
     }
 }

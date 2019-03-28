@@ -11,4 +11,5 @@ import javax.inject.Inject
  * desc:
  *
  */
-class SectionDetailPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) : RxPresenter<SectionDetailContract.View>(), SectionDetailContract.Presenter<SectionDetailContract.View>
+class SectionDetailPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) :
+        RxPresenter<SectionDetailContract.View>(), SectionDetailContract.Presenter<SectionDetailContract.View>

@@ -26,9 +26,9 @@ class VideoPlayerActivity : BaseActivity(), VideoBackListener {
     private var mLoadingAnim: AnimationDrawable? = null
     private var mLastPosition = 0L
     // 点击纵坐标L
-    private var downX: Float = 0f
+    private var downX = 0f
     // 点击横坐标
-    private var downY: Float = 0f
+    private var downY = 0f
     // 媒体音量管理
     private var audioManager: AudioManager? = null
     // 屏幕当前亮度百分比

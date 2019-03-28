@@ -9,10 +9,16 @@ import java.util.concurrent.TimeUnit
  * created at 2018/8/23 9:31
  * desc: okhttp辅助类
  */
-class OkHttpHelper private constructor() {
+object OkHttpHelper {
+    // 连接时长
+    val DEFAULT_CONNECT_TIMEOUT_MILLIS = 20 * 1000
+    // 写入时长
+    val DEFAULT_WIRTE_TIMEOUT_MILLS = 20 * 1000
+    // 读取时长
+    val DEFAULT_READ_TIMEOUOT_MILLS = 20 * 1000
 
-    val okHttpClient: OkHttpClient
-        get() = mOkHttpClient
+    @Volatile
+    private var mOkHttpClient: OkHttpClient
 
     init {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
@@ -32,31 +38,7 @@ class OkHttpHelper private constructor() {
                 .build()
     }
 
-    companion object {
-        // 连接时长
-        private val DEFAULT_CONNECT_TIMEOUT_MILLIS = 20 * 1000
-        // 写入时长
-        private val DEFAULT_WIRTE_TIMEOUT_MILLS = 20 * 1000
-        // 读取时长
-        private val DEFAULT_READ_TIMEOUOT_MILLS = 20 * 1000
-
-        @Volatile
-        private var sInstance: OkHttpHelper? = null
-
-        private lateinit var mOkHttpClient: OkHttpClient
-
-        val instance: OkHttpHelper?
-            get() {
-                if (sInstance == null) {
-                    synchronized(OkHttpHelper::class.java) {
-                        if (sInstance == null) {
-                            sInstance = OkHttpHelper()
-                        }
-                    }
-                }
-                return sInstance
-            }
-    }
+    fun getOkHttpClient(): OkHttpClient = mOkHttpClient
 
     // 读取Cookie的拦截器
 //    class ReadCookiesInterceptor : Interceptor {

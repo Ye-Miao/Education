@@ -14,14 +14,17 @@ import javax.inject.Inject
  * desc: 选择阶段
  *
  */
-class ChoosePhasePresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) : RxPresenter<ChoosePhaseContract.View>(), ChoosePhaseContract.Presenter<ChoosePhaseContract.View> {
+class ChoosePhasePresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) :
+        RxPresenter<ChoosePhaseContract.View>(), ChoosePhaseContract.Presenter<ChoosePhaseContract.View> {
+
     override fun getDiscoveryComment() {
-        addSubscribe(mRetrofitHelper.getDiscoveryComment()
+        val subscriber = mRetrofitHelper.getDiscoveryComment()
                 .compose(rxSchedulerHelper())
                 .subscribeWith(object : BaseSubscriber<DiscoveryCommentBean>(mView) {
                     override fun onSuccess(mData: DiscoveryCommentBean) {
                         mView?.showDiscoveryComment(mData)
                     }
-                }))
+                })
+        addSubscribe(subscriber)
     }
 }

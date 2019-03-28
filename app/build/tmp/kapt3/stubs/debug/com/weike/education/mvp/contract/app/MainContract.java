@@ -25,7 +25,7 @@ public abstract interface MainContract {
     public static abstract interface Presenter<T extends java.lang.Object> extends com.weike.education.base.BaseContract.BasePresenter<T> {
         
         /**
-         * * @param  tagId    [所处阶段Id,阶段对应级别（如初中->初一、初二、初三）]
+         * * @param tagId [所处阶段Id,阶段对应级别（如初中->初一、初二、初三）]
          *         * @return
          */
         public abstract void getRegionTagTypeBean(@org.jetbrains.annotations.NotNull()

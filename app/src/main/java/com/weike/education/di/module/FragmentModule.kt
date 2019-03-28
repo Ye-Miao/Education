@@ -14,11 +14,10 @@ import dagger.Provides
  * desc: Fragment模型
  */
 @Module
-class FragmentModule(val mFragment: Fragment) {
+class FragmentModule(val fragment: Fragment) {
 
     @Provides
     @FragmentScope
-    fun provideActivity(): Activity {
-        return mFragment.activity!!
-    }
+    fun provideActivity(): Activity = fragment.activity!!
+
 }

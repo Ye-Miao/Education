@@ -14,14 +14,17 @@ import javax.inject.Inject
  * desc: 我的-MinePresenter
  *
  */
-class MinePresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) : RxPresenter<MineContract.View>(), MineContract.Presenter<MineContract.View> {
+class MinePresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) :
+        RxPresenter<MineContract.View>(), MineContract.Presenter<MineContract.View> {
+
     override fun getMine() {
-        addSubscribe(mRetrofitHelper.getMine()
+        val subscriber = mRetrofitHelper.getMine()
                 .compose(rxSchedulerHelper())
                 .subscribeWith(object : BaseSubscriber<MineBean>(mView) {
                     override fun onSuccess(mData: MineBean) {
                         mView?.showMine(mData)
                     }
-                }))
+                })
+        addSubscribe(subscriber)
     }
 }

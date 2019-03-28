@@ -14,7 +14,7 @@ interface ChoosePhaseContract {
         fun showDiscoveryComment(mData: DiscoveryCommentBean)
     }
 
-    interface Presenter<T> : BaseContract.BasePresenter<T> {
+    interface Presenter<in T> : BaseContract.BasePresenter<T> {
         fun getDiscoveryComment()
     }
 }

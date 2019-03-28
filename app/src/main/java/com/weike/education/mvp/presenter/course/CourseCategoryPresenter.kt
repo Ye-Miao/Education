@@ -14,14 +14,17 @@ import javax.inject.Inject
  * desc: 我的课程-CourseCategoryPresenter
  *
  */
-class CourseCategoryPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) : RxPresenter<CourseCategoryContract.View>(), CourseCategoryContract.Presenter<CourseCategoryContract.View> {
+class CourseCategoryPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHelper) :
+        RxPresenter<CourseCategoryContract.View>(), CourseCategoryContract.Presenter<CourseCategoryContract.View> {
+
     override fun getVideo() {
-        addSubscribe(mRetrofitHelper.getVideo()
+        val subscriber = mRetrofitHelper.getVideo()
                 .compose(rxSchedulerHelper())
                 .subscribeWith(object : BaseSubscriber<VideoBean>(mView) {
                     override fun onSuccess(mData: VideoBean) {
                         mView?.showVideo(mData)
                     }
-                }))
+                })
+        addSubscribe(subscriber)
     }
 }

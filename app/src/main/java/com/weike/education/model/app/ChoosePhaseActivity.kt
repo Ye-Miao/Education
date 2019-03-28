@@ -48,7 +48,6 @@ class ChoosePhaseActivity : BaseInjectActivity<ChoosePhasePresenter>(), ChoosePh
     override fun loadData() = mPresenter.getDiscoveryComment()
 
     override fun initWidget() {
-        super.initWidget()
         StatusBarUtil.setColorNoTranslucent(this, AppUtils.getColor(R.color.white))
         intent?.let {
             numbers = intent.getIntegerArrayListExtra("number")
@@ -73,25 +72,24 @@ class ChoosePhaseActivity : BaseInjectActivity<ChoosePhasePresenter>(), ChoosePh
     private fun switchScreen() {
         val hostObject = JsonParser().parse(Gson().toJson(mStages)).asJsonObject
         var nextId: String? = null
-        for (stages in mStages.`154271985`.subTags) {
-            if (leftId == stages.tagId) {
-                nextId = stages.nextStage
-                switchCategory(mStages.`154271985`.subTags.indexOf(stages))
-                break
+
+        mStages.`154271985`.subTags.forEach {
+            if (it.tagId == leftId) {
+                nextId = it.nextStage
+                switchCategory(mStages.`154271985`.subTags.indexOf(it))
             }
         }
-        for (article in hostObject.keySet()) {
-            if (nextId == article) {
-                val json = hostObject.getAsJsonObject(article)
-                mTagBean = Gson().fromJson(json, TagBean::class.java)
-                for (tag in mTagBean.subTags) {
-                    if (tag.tagId == numbers[1]) {
-                        mPosition = mTagBean.subTags.indexOf(tag)
-                        break
+
+        hostObject.keySet().forEach {
+            if (it == nextId) {
+                val json = hostObject.getAsJsonObject(it)
+                val mSubTags = Gson().fromJson(json, TagBean::class.java)
+                mSubTags.subTags.forEach { subTag ->
+                    if (subTag.tagId == numbers[1]) {
+                        mPosition = mTagBean.subTags.indexOf(subTag)
                     }
                 }
                 switchRepresent(mTagBean)
-                break
             }
         }
     }

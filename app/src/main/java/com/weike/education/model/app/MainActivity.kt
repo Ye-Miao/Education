@@ -29,7 +29,7 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
 
     private val CHOOSE_REQUESTCODE = 1
     private var exitTime = 0L
-    private var mCurrentPos: Int = -1
+    private var mCurrentPos = -1
     private val numbers = ArrayList<Int>()
     private var mFragments = mutableListOf<Fragment>()
     private var mTabEntities = ArrayList<CustomTabEntity>()
@@ -68,21 +68,21 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
         val hostObject = JsonParser().parse(Gson().toJson(stages)).asJsonObject
         var nextId: String? = null
         var result = JsonObject()
-        for (stages in stages.`154271985`.subTags) {
-            if (numbers[0] == stages.tagId) {
-                nextId = stages.nextStage
-                break
+
+        stages.`154271985`.subTags.forEach {
+            if (it.tagId == numbers[0]) {
+                nextId = it.nextStage
             }
         }
-        for (article in hostObject.keySet()) {
-            if (nextId == article) {
-                val json = hostObject.getAsJsonObject(article)
+
+        hostObject.keySet().forEach {
+            if (it == nextId) {
+                val json = hostObject.getAsJsonObject(it)
                 val mSubTags = Gson().fromJson(json, TagBean::class.java)
-                for (tag in mSubTags.subTags) {
-                    if (numbers[1] == tag.tagId) {
-                        title = tag.tagName
-                        result = hostObject.getAsJsonObject(tag.nextStage)
-                        break
+                mSubTags.subTags.forEach { subTag ->
+                    if (subTag.tagId == numbers[1]) {
+                        title = subTag.tagName
+                        result = hostObject.getAsJsonObject(subTag.nextStage)
                     }
                 }
             }

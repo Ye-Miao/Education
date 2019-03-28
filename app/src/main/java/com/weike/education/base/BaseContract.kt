@@ -17,7 +17,7 @@ interface BaseContract {
         fun complete()
     }
 
-    interface BasePresenter<T> {
+    interface BasePresenter<in T> {
         /**
          * 绑定
          *
