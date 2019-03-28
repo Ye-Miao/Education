@@ -18,17 +18,21 @@ import com.weike.education.model.course.video.VideoPlayerActivity
  */
 class CourseCategoryAdapter(data: List<VideoBean.Data.Video>) : BaseQuickAdapter<VideoBean.Data.Video, BaseViewHolder>(R.layout.layout_course_video, data) {
     override fun convert(helper: BaseViewHolder, item: VideoBean.Data.Video) {
-        helper.setText(R.id.tv_title, item.title)
-        Glide.with(mContext)
-                .load(item.img)
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .dontAnimate()
-                .into(helper.getView(R.id.iv_preview))
-        helper.itemView.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString("Url", item.videoUrl)
-            bundle.putString("title", item.title)
-            mContext.startActivity(Intent(mContext, VideoPlayerActivity::class.java).putExtra("bundle", bundle))
+        helper.apply {
+            item.let {
+                setText(R.id.tv_title, item.title)
+                Glide.with(mContext)
+                        .load(item.img)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .dontAnimate()
+                        .into(getView(R.id.iv_preview))
+                itemView.setOnClickListener {
+                    val bundle = Bundle()
+                    bundle.putString("Url", item.videoUrl)
+                    bundle.putString("title", item.title)
+                    mContext.startActivity(Intent(mContext, VideoPlayerActivity::class.java).putExtra("bundle", bundle))
+                }
+            }
         }
     }
 }

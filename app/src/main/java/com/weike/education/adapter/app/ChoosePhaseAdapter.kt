@@ -18,18 +18,17 @@ class ChoosePhaseAdapter(layoutId: Int, mData: List<DiscoveryCommentBean.Data.St
 
     override fun convert(helper: BaseViewHolder, item: DiscoveryCommentBean.Data.Stages.SubTag) {
         helper.apply {
-            item.let {
-                setText(R.id.left_text, it.tagName)
-                addOnClickListener(R.id.left_item)
-                if (adapterPosition == selectedPosition) {
-                    itemView.left_text.setTextColor(getColor(R.color.tab_textSelectColor))
-                    itemView.left_item.setBackgroundColor(getColor(R.color.choose_left_bg))
-                } else {
-                    // 默认 不设置颜色
-                    itemView.left_text.setTextColor(getColor(R.color.tab_textUnSelectColor))
-                    // 默认背景
-                    itemView.left_item.setBackgroundColor(getColor(R.color.choose_left_bg_UnSelect))
-                }
+            setText(R.id.left_text, item.tagName)
+            addOnClickListener(R.id.left_item)
+
+            if (adapterPosition == selectedPosition) {
+                itemView.left_text.setTextColor(getColor(R.color.tab_textSelectColor))
+                itemView.left_item.setBackgroundColor(getColor(R.color.choose_left_bg))
+            } else {
+                // 默认 不设置颜色
+                itemView.left_text.setTextColor(getColor(R.color.tab_textUnSelectColor))
+                // 默认背景
+                itemView.left_item.setBackgroundColor(getColor(R.color.choose_left_bg_UnSelect))
             }
         }
     }

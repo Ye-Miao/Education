@@ -22,7 +22,9 @@ class SectionSpecial(list: List<SelectionBean.Data.Zhuanlan>?) : StatelessSectio
     override fun convert(holder: ViewHolder, zhuanlan: SelectionBean.Data.Zhuanlan, position: Int) {
         holder.apply {
             zhuanlan.let {
-                if (position != 0) getView<ConstraintLayout>(R.id.item).setBackgroundResource(R.drawable.ic_bottom_lines)
+                if (position != 0) {
+                    getView<ConstraintLayout>(R.id.item).setBackgroundResource(R.drawable.ic_bottom_lines)
+                }
 
                 setText(R.id.special_title, it.title)
                 setText(R.id.special_teacherName, it.teacherName)

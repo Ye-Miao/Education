@@ -22,7 +22,9 @@ class SectionCourse(list: List<SelectionBean.Data.Course>?) : StatelessSection<S
     override fun convert(holder: ViewHolder, mBean: SelectionBean.Data.Course, position: Int) {
         holder.apply {
             mBean.let {
-                if (position != 0) getView<View>(R.id.item).setBackgroundResource(R.drawable.ic_bottom_lines)
+                if (position != 0) {
+                    getView<View>(R.id.item).setBackgroundResource(R.drawable.ic_bottom_lines)
+                }
 
                 setText(R.id.categoryName, it.categoryName)
                 setText(R.id.title, it.courseTitle)
