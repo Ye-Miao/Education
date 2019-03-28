@@ -20,7 +20,6 @@ import android.util.TypedValue
 import android.view.View
 import com.weike.education.R
 
-
 /**
  * 圆形加载框
  * A Material style progress wheel, compatible up to 2.2.
@@ -39,7 +38,7 @@ class ProgressWheel : View {
      * DEFAULTS *
      * **********
      */
-    //Sizes (with defaults in DP)
+    // Sizes (with defaults in DP)
     private var circleRadius = 28
     private var barWidth = 4
     private var rimWidth = 4
@@ -49,21 +48,21 @@ class ProgressWheel : View {
     private var barExtraLength = 0f
     private var barGrowingFromFront = true
     private var pausedTimeWithoutGrowing: Long = 0
-    //Colors (with defaults)
+    // Colors (with defaults)
     private var barColor = -0x56000000
     private var rimColor = 0x00FFFFFF
 
-    //Paints
+    // Paints
     private val barPaint = Paint()
     private val rimPaint = Paint()
 
-    //Rectangles
+    // Rectangles
     private var circleBounds = RectF()
 
-    //Animation
-    //The amount of degrees per second
+    // Animation
+    // The amount of degrees per second
     private var spinSpeed = 230.0f
-    //private float spinSpeed = 120.0f;
+    // private float spinSpeed = 120.0f;
     // The last time the spinner was animated
     private var lastTimeAnimated: Long = 0
 
@@ -86,9 +85,9 @@ class ProgressWheel : View {
      * @return the current progress between 0.0 and 1.0,
      * if the wheel is indeterminate, then the result is -1
      */
-    //----------------------------------
-    //Getters + setters
-    //----------------------------------
+    // ----------------------------------
+    // Getters + setters
+    // ----------------------------------
 
     /**
      * Set the progress to a specific value,
@@ -161,9 +160,9 @@ class ProgressWheel : View {
         shouldAnimate = animationValue != 0f
     }
 
-    //----------------------------------
-    //Setting up stuff
-    //----------------------------------
+    // ----------------------------------
+    // Setting up stuff
+    // ----------------------------------
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
@@ -179,27 +178,27 @@ class ProgressWheel : View {
         val width: Int
         val height: Int
 
-        //Measure Width
+        // Measure Width
         if (widthMode == View.MeasureSpec.EXACTLY) {
-            //Must be this size
+            // Must be this size
             width = widthSize
         } else if (widthMode == View.MeasureSpec.AT_MOST) {
-            //Can't be bigger than...
+            // Can't be bigger than...
             width = Math.min(viewWidth, widthSize)
         } else {
-            //Be whatever you want
+            // Be whatever you want
             width = viewWidth
         }
 
-        //Measure Height
+        // Measure Height
         if (heightMode == View.MeasureSpec.EXACTLY || widthMode == View.MeasureSpec.EXACTLY) {
-            //Must be this size
+            // Must be this size
             height = heightSize
         } else if (heightMode == View.MeasureSpec.AT_MOST) {
-            //Can't be bigger than...
+            // Can't be bigger than...
             height = Math.min(viewHeight, heightSize)
         } else {
-            //Be whatever you want
+            // Be whatever you want
             height = viewHeight
         }
 
@@ -310,9 +309,9 @@ class ProgressWheel : View {
         }
     }
 
-    //----------------------------------
-    //Animation stuff
-    //----------------------------------
+    // ----------------------------------
+    // Animation stuff
+    // ----------------------------------
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
@@ -326,7 +325,7 @@ class ProgressWheel : View {
         }
 
         if (isSpinning) {
-            //Draw the spinning bar
+            // Draw the spinning bar
             mustInvalidate = true
 
             val deltaTime = SystemClock.uptimeMillis() - lastTimeAnimated
@@ -358,7 +357,7 @@ class ProgressWheel : View {
             val oldProgress = mProgress
 
             if (mProgress != mTargetProgress) {
-                //We smoothly increase the progress bar
+                // We smoothly increase the progress bar
                 mustInvalidate = true
 
                 val deltaTime = (SystemClock.uptimeMillis() - lastTimeAnimated).toFloat() / 1000
@@ -408,9 +407,9 @@ class ProgressWheel : View {
                 // We completed a size change cycle
                 // (growing or shrinking)
                 timeStartGrowing -= barSpinCycleTime
-                //if(barGrowingFromFront) {
+                // if(barGrowingFromFront) {
                 pausedTimeWithoutGrowing = 0
-                //}
+                // }
                 barGrowingFromFront = !barGrowingFromFront
             }
 
@@ -731,7 +730,7 @@ class ProgressWheel : View {
         }
 
         companion object {
-            //required field that makes Parcelables from a Parcel
+            // required field that makes Parcelables from a Parcel
             @SuppressLint("ParcelCreator")
             val CREATOR: Parcelable.Creator<WheelSavedState> = object : Parcelable.Creator<WheelSavedState> {
                 override fun createFromParcel(`in`: Parcel): WheelSavedState {

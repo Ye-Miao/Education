@@ -14,7 +14,6 @@ class OkHttpHelper private constructor() {
     val okHttpClient: OkHttpClient
         get() = mOkHttpClient
 
-
     init {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
@@ -34,11 +33,11 @@ class OkHttpHelper private constructor() {
     }
 
     companion object {
-        //连接时长
+        // 连接时长
         private val DEFAULT_CONNECT_TIMEOUT_MILLIS = 20 * 1000
-        //写入时长
+        // 写入时长
         private val DEFAULT_WIRTE_TIMEOUT_MILLS = 20 * 1000
-        //读取时长
+        // 读取时长
         private val DEFAULT_READ_TIMEOUOT_MILLS = 20 * 1000
 
         @Volatile
@@ -59,7 +58,7 @@ class OkHttpHelper private constructor() {
             }
     }
 
-    //读取Cookie的拦截器
+    // 读取Cookie的拦截器
 //    class ReadCookiesInterceptor : Interceptor {
 //        override fun intercept(chain: Interceptor.Chain): Response {
 //            val builder = chain.request().newBuilder()
@@ -71,7 +70,7 @@ class OkHttpHelper private constructor() {
 //        }
 //    }
 
-    //存储Cookie的拦截器
+    // 存储Cookie的拦截器
 //    class SaveCookiesInterceptor : Interceptor {
 //        override fun intercept(chain: Interceptor.Chain): Response {
 //            val originalResponse = chain.proceed(chain.request())
@@ -85,5 +84,4 @@ class OkHttpHelper private constructor() {
 //            return originalResponse
 //        }
 //    }
-
 }

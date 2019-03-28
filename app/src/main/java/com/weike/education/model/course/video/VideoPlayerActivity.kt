@@ -14,7 +14,6 @@ import com.weike.education.media.callback.VideoBackListener
 import kotlinx.android.synthetic.main.layout_video.*
 import tv.danmaku.ijk.media.player.IMediaPlayer
 
-
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
  * date: 2018/12/4
@@ -26,13 +25,13 @@ class VideoPlayerActivity : BaseActivity(), VideoBackListener {
     private var mStartText = "初始化播放器..."
     private var mLoadingAnim: AnimationDrawable? = null
     private var mLastPosition = 0L
-    //点击纵坐标L
+    // 点击纵坐标L
     private var downX: Float = 0f
-    //点击横坐标
+    // 点击横坐标
     private var downY: Float = 0f
-    //媒体音量管理
+    // 媒体音量管理
     private var audioManager: AudioManager? = null
-    //屏幕当前亮度百分比
+    // 屏幕当前亮度百分比
     private var currentF = 0f
     private var mUrl: String? = ""
     private var mTitle: String? = ""
@@ -44,7 +43,7 @@ class VideoPlayerActivity : BaseActivity(), VideoBackListener {
 
     override fun initWidget() {
         super.initWidget()
-        //初始化播放器
+        // 初始化播放器
         initMediaPlayer()
         audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
         mMaxVolume = audioManager!!.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
@@ -53,7 +52,6 @@ class VideoPlayerActivity : BaseActivity(), VideoBackListener {
             mUrl = bundle.getString("Url")
             mTitle = bundle.getString("title")
         }
-
     }
 
     private fun initMediaPlayer() {
@@ -66,11 +64,9 @@ class VideoPlayerActivity : BaseActivity(), VideoBackListener {
         player_view.setOnSeekCompleteListener(onSeekCompleteListener)
         player_view.setOnCompletionListener(onCompletionListener)
         player_view.setOnControllerEventsListener(onControllerEventsListener)
-        //设置返回键监听
+        // 设置返回键监听
         mMediaController?.setVideoBackEvent(this)
-
     }
-
 
     /**
      * 初始化加载动画
@@ -111,14 +107,11 @@ class VideoPlayerActivity : BaseActivity(), VideoBackListener {
      */
     private val onControllerEventsListener = object : VideoPlayerView.OnControllerEventsListener {
         override fun onVideoPause() {
-
         }
 
         override fun onVideoResume() {
-
         }
     }
-
 
     override fun onResume() {
         super.onResume()
@@ -172,5 +165,4 @@ class VideoPlayerActivity : BaseActivity(), VideoBackListener {
         }
         gone(rl_start)
     }
-
 }

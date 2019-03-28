@@ -24,5 +24,4 @@ class MinePresenter @Inject constructor(private val mRetrofitHelper: RetrofitHel
                     }
                 }))
     }
-
 }

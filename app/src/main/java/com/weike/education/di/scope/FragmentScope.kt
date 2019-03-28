@@ -1,6 +1,5 @@
 package com.weike.education.di.scope
 
-
 import javax.inject.Scope
 
 /**

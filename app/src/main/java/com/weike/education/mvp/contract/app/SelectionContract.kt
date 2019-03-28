@@ -18,5 +18,4 @@ interface SelectionContract {
     interface Presenter<T> : BaseContract.BasePresenter<T> {
         fun getSelection()
     }
-
 }

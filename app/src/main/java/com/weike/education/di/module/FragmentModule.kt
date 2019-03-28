@@ -1,6 +1,5 @@
 package com.weike.education.di.module
 
-
 import android.app.Activity
 import android.support.v4.app.Fragment
 
@@ -22,5 +21,4 @@ class FragmentModule(val mFragment: Fragment) {
     fun provideActivity(): Activity {
         return mFragment.activity!!
     }
-
 }

@@ -31,7 +31,7 @@ class SplashActivity : BaseActivity() {
 
     override fun initWidget() {
         super.initWidget()
-        //设置透明
+        // 设置透明
         StatusBarUtil.setTransparent(this)
     }
 

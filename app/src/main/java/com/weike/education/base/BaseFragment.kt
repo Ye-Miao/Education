@@ -25,11 +25,10 @@ abstract class BaseFragment : RxFragment() {
     protected var mActivity: Activity? = null
     protected var mInflater: LayoutInflater? = null
     protected var mContext: Context? = null
-    //标记初始化已经完成
+    // 标记初始化已经完成
     protected var mIsPrepared: Boolean = false
-    //标志Fragment是否可见
+    // 标志Fragment是否可见
     protected var mIsVisible: Boolean = false
-
 
     override fun onAttach(context: Context?) {
         mActivity = context as? Activity
@@ -63,11 +62,9 @@ abstract class BaseFragment : RxFragment() {
     }
 
     protected open fun initSetListener() {
-
     }
 
     protected open fun lazyLoadData() {
-
     }
 
     protected open fun initDatas() {
@@ -79,7 +76,6 @@ abstract class BaseFragment : RxFragment() {
         lazyLoad()
     }
 
-
     /**
      * 分离
      */
@@ -88,12 +84,10 @@ abstract class BaseFragment : RxFragment() {
         super.onDetach()
     }
 
-
     /**
      * 初始化RV
      */
     protected open fun initRecyclerView() {
-
     }
 
     /**
@@ -101,21 +95,18 @@ abstract class BaseFragment : RxFragment() {
      */
     @SuppressLint("CheckResult")
     protected open fun initRefreshLayout() {
-
     }
 
     /**
      * 清除数据
      */
     protected open fun clearData() {
-
     }
 
     /**
      * 初始化Presenter
      */
     protected open fun initPresenter() {}
-
 
     /**
      * 初始化变量
@@ -126,13 +117,12 @@ abstract class BaseFragment : RxFragment() {
      * 懒加载
      */
     protected open fun lazyLoad() {
-        if (!mIsPrepared || !mIsVisible) return@lazyLoad
+        if (!mIsPrepared || !mIsVisible) return
         lazyLoadData()
         mIsPrepared = false
     }
 
     protected open fun onInvisible() {
-
     }
 
     /**
@@ -144,11 +134,9 @@ abstract class BaseFragment : RxFragment() {
      * 注入dagger2依赖
      */
     protected open fun initInject() {
-
     }
 
     protected open fun finishTask() {
-
     }
 
     /**
@@ -161,7 +149,6 @@ abstract class BaseFragment : RxFragment() {
      * 对各种控件进行设置、适配、填充数据
      */
     open fun initWidget() {
-
     }
 
     protected open fun onVisible() {
@@ -183,13 +170,11 @@ abstract class BaseFragment : RxFragment() {
         }
     }
 
-
     /**
      * 获取Activity
      * @return FragmentActivity
      */
     fun getSupportActivity(): FragmentActivity = super.getActivity() as FragmentActivity
-
 
     /**
      * 获取ApplicationContext 信息

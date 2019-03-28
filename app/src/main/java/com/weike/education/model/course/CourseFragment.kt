@@ -28,5 +28,4 @@ class CourseFragment : BaseFragment() {
         course_tabs.setViewPager(view_pager)
         view_pager.currentItem = 0
     }
-
 }

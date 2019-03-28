@@ -38,7 +38,7 @@ class CircleImageView @JvmOverloads constructor(context: Context, attrs: Attribu
     private val mReady: Boolean
     private var mSetupPending: Boolean = false
 
-    //默认显示圆形
+    // 默认显示圆形
     private var isDisplayCircle = true
 
     var borderColor: Int
@@ -159,7 +159,6 @@ class CircleImageView @JvmOverloads constructor(context: Context, attrs: Attribu
         } catch (e: OutOfMemoryError) {
             return null
         }
-
     }
 
     private fun setup() {
@@ -226,5 +225,4 @@ class CircleImageView @JvmOverloads constructor(context: Context, attrs: Attribu
         private val DEFAULT_BORDER_WIDTH = 0
         private val DEFAULT_BORDER_COLOR = Color.BLACK
     }
-
 }

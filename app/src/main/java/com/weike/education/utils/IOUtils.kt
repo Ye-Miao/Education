@@ -13,7 +13,7 @@ class IOUtils {
     /**
      * 输入流保存到文件
      *
-     * @param source     输入流来源
+     * @param source 输入流来源
      * @param targetPath 目标文件路径
      * @return 文件路径
      */
@@ -30,7 +30,6 @@ class IOUtils {
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
-
             }
             inBuff = BufferedInputStream(source)
             outBuff = BufferedOutputStream(FileOutputStream(target))
@@ -49,7 +48,6 @@ class IOUtils {
             } catch (e: IOException) {
                 e.printStackTrace()
             }
-
         }
         if (target.length() > 0) {
             return target.absolutePath
@@ -104,7 +102,6 @@ class IOUtils {
                 } catch (e: IOException) {
                     throw RuntimeException("IOException occurred. ", e)
                 }
-
             }
         }
 
@@ -160,5 +157,4 @@ class IOUtils {
             }
         }
     }
-
 }

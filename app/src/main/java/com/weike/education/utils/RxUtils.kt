@@ -5,7 +5,6 @@ import io.reactivex.Flowable
 import io.reactivex.FlowableTransformer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import java.lang.Exception
 
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
@@ -24,8 +23,7 @@ fun <T> rxSchedulerHelper(): FlowableTransformer<T, T> =
         FlowableTransformer { observable ->
             observable.subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
-        }  //compose简化线程 统一处理线程
-
+        } // compose简化线程 统一处理线程
 
 /**
  * 生成Flowable
@@ -60,5 +58,4 @@ fun <T> createData(t: List<T>): Flowable<List<T>> {
         }
     }, BackpressureStrategy.BUFFER)
 }
-
 

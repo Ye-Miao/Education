@@ -1,6 +1,5 @@
 package com.weike.education.utils
 
-
 import android.annotation.SuppressLint
 import android.view.Gravity
 import android.widget.Toast
@@ -18,7 +17,7 @@ object ToastUtils {
     /**********************
      * 非连续弹出的Toast
      */
-    fun showSingleToast(resId: Int) { //R.string.**
+    fun showSingleToast(resId: Int) { // R.string.**
         getSingleToast(resId, Toast.LENGTH_SHORT).show()
     }
 
@@ -56,7 +55,7 @@ object ToastUtils {
     /**********************
      * 非连续弹出的Toast 位置在中央
      */
-    fun showCenterSingleToast(resId: Int) { //R.string.**
+    fun showCenterSingleToast(resId: Int) { // R.string.**
         getCenterSingleToast(resId, Toast.LENGTH_SHORT).show()
     }
 

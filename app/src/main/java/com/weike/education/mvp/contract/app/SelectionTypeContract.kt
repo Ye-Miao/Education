@@ -17,5 +17,4 @@ interface SelectionTypeContract {
     interface Presenter<T> : BaseContract.BasePresenter<T> {
         fun getVertical(tag: Int)
     }
-
 }

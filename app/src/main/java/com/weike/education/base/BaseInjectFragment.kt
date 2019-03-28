@@ -26,9 +26,7 @@ abstract class BaseInjectFragment<T : BaseContract.BasePresenter<*>> : BaseFragm
                 .build()
 
     override fun showError(msg: String) {
-
     }
-
 
     override fun onDestroy() {
         mPresenter.detachView()
@@ -36,6 +34,5 @@ abstract class BaseInjectFragment<T : BaseContract.BasePresenter<*>> : BaseFragm
     }
 
     override fun complete() {
-
     }
 }

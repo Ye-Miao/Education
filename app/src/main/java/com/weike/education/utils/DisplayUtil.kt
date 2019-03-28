@@ -16,7 +16,6 @@ object DisplayUtil {
     fun px2dip(pxValue: Float): Int =
             (pxValue / AppUtils.getScreenScale() + 0.5f).toInt()
 
-
     /**
      * 将dip或dp值转换成px值，保证尺寸大小不变
      */
@@ -34,7 +33,6 @@ object DisplayUtil {
      */
     fun sp2px(spValue: Float): Int =
             (spValue * AppUtils.getScreenScaleDensity() + 0.5f).toInt()
-
 
     fun sp2px(size: Int): Float =
             TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, size.toFloat(), AppUtils.getDisplayMetrics())

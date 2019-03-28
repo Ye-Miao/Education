@@ -42,5 +42,4 @@ open class RxPresenter<T : BaseContract.BaseView> : BaseContract.BasePresenter<T
     override fun attachView(view: T) {
         this.mView = view
     }
-
 }

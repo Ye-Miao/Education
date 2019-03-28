@@ -17,13 +17,12 @@ class SectionTypeSubTagAdapter(list: List<VerticalBean.Data.SubTag>?) : BaseQuic
     override fun convert(helper: BaseViewHolder, item: VerticalBean.Data.SubTag) {
         helper.apply {
             item.let {
-                setText(R.id.tv_title, item.name)
+                setText(R.id.tv_title, it.name)
                 Glide.with(mContext)
-                        .load(item.icon)
+                        .load(it.icon)
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(helper.getView(R.id.iv_icon))
             }
         }
     }
-
 }

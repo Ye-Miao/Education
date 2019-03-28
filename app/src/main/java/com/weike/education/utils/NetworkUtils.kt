@@ -2,7 +2,6 @@
 
 package com.weike.education.utils
 
-
 import android.content.*
 import android.net.ConnectivityManager
 import android.os.Build
@@ -52,7 +51,6 @@ object NetworkUtils {
         Wifi(4, "Wifi网络"),
         Other(8, "未知网络")
     }
-
 
     /**
      * 获取ConnectivityManager
@@ -134,26 +132,22 @@ object NetworkUtils {
         return networkInfo != null && networkInfo.type == ConnectivityManager.TYPE_MOBILE && networkInfo.isConnected
     }
 
-
     /**
      * 开启服务,实时监听网络变化（需要在清单文件配置Service）
      */
     fun startNetService(context: Context) {
-        //注册广播
+        // 注册广播
         val intentFilter = IntentFilter()
         intentFilter.addAction(NET_BROADCAST_ACTION)
         context.registerReceiver(mReceiver, intentFilter)
-        //开启服务
+        // 开启服务
         val intent = Intent(context, NetworkService::class.java)
         context.bindService(intent, object : ServiceConnection {
             override fun onServiceConnected(name: ComponentName, service: IBinder) {
-
             }
 
             override fun onServiceDisconnected(name: ComponentName) {
-
             }
         }, Context.BIND_AUTO_CREATE)
     }
-
 }

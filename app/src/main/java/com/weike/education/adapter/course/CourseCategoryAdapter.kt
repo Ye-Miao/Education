@@ -31,5 +31,4 @@ class CourseCategoryAdapter(data: List<VideoBean.Data.Video>) : BaseQuickAdapter
             mContext.startActivity(Intent(mContext, VideoPlayerActivity::class.java).putExtra("bundle", bundle))
         }
     }
-
 }

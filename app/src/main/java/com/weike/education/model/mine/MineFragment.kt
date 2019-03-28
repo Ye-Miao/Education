@@ -1,6 +1,5 @@
 package com.weike.education.model.mine
 
-
 import android.annotation.SuppressLint
 import android.content.Intent
 import com.bumptech.glide.Glide

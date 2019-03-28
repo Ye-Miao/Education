@@ -20,5 +20,4 @@ class ActivityModule(val mActivity: Activity) {
     fun provideActivity(): Activity {
         return mActivity
     }
-
 }

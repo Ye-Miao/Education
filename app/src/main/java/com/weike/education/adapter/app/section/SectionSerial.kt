@@ -58,5 +58,4 @@ class SectionSerial(list: List<SelectionBean.Data.Serial>?) : StatelessSection<S
         holder.setText(R.id.headTitle, R.string.head_serial).setVisible(R.id.headMore, false)
         holder.itemView.setBackgroundResource(R.drawable.section_serial_gradient)
     }
-
 }

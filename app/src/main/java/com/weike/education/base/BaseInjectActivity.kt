@@ -32,11 +32,8 @@ abstract class BaseInjectActivity<T : BaseContract.BasePresenter<*>> : BaseActiv
     }
 
     override fun showError(msg: String) {
-
     }
 
     override fun complete() {
-
     }
-
 }

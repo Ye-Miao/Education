@@ -22,7 +22,6 @@ abstract class BaseRefreshActivity<T : BaseContract.BasePresenter<*>, K> : BaseI
     protected var mList: MutableList<K>? = ArrayList()
     private var mLoading: ProgressWheel? = null
 
-
     protected fun initRefreshLayout() {
         mRefresh?.let {
             it.setColorSchemeResources(R.color.colorPrimary)
@@ -66,7 +65,7 @@ abstract class BaseRefreshActivity<T : BaseContract.BasePresenter<*>, K> : BaseI
     }
 
     override fun loadDatas() {
-        //有刷新控件才刷新数据
+        // 有刷新控件才刷新数据
         mRefresh?.let {
             mLoading?.let {
                 it.visibility = View.VISIBLE

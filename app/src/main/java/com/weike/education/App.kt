@@ -68,7 +68,6 @@ class App : Application() {
 //    fun setCookies(cookies: java.util.HashSet<String>) =
 //            mSp.edit().putStringSet(Constants.EXTRA_COOKIE, cookies).apply()
 
-
     private fun initNetwork() {
         NetworkUtils.startNetService(this)
     }
@@ -111,5 +110,4 @@ class App : Application() {
         android.os.Process.killProcess(android.os.Process.myPid())
         System.exit(0)
     }
-
 }

@@ -18,24 +18,22 @@ class RetrofitHelper(private val mApiService: ApiService) {
 
     /*******************************ApiService *********************************/
 
-    //首页层次（学习阶段分层）
+    // 首页层次（学习阶段分层）
     fun getDiscoveryComment(): Flowable<DiscoveryCommentBean> = mApiService.discoveryComment
 
-    //获取相应Tag页面的内容
+    // 获取相应Tag页面的内容
     fun getVertical(tag: Int): Flowable<VerticalBean> = mApiService.getVertical(tag)
 
-    //提交精选内容相应区别参数
+    // 提交精选内容相应区别参数
     fun setTag(tagList: Map<String, Any>): Flowable<TagSuccessBean> = mApiService.setTag(tagList)
 
-    //获取精选内容
+    // 获取精选内容
     fun getSelection(): Flowable<SelectionBean> = mApiService.selection
 
-    //获取头像内容,名字
+    // 获取头像内容,名字
     fun getMine(): Flowable<MineBean> = mApiService.mine
 
-    //获取视频流
+    // 获取视频流
     fun getVideo(): Flowable<VideoBean> = mApiService.video
 }
-
-
 

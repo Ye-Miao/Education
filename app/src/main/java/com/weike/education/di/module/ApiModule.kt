@@ -27,13 +27,12 @@ class ApiModule {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-
     }
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient {
-        return OkHttpHelper.instance!!.okHttpClient
+    fun provideOkHttpClient(): OkHttpClient? {
+        return OkHttpHelper.instance?.okHttpClient
     }
 
     @Provides
@@ -42,13 +41,11 @@ class ApiModule {
         return Retrofit.Builder()
     }
 
-
     @Provides
     @Singleton
     fun provideRetrofitHelper(apiService: ApiService): RetrofitHelper {
         return RetrofitHelper(apiService)
     }
-
 
     @Singleton
     @Provides

@@ -10,16 +10,18 @@ import android.os.Parcelable
  *
  */
 class TagBean(
-        val id: String,
-        val multiType: String,
-        val showNext: Boolean,
-        val subTags: List<SubTag>,
-        val title: String) : Parcelable {
+    val id: String,
+    val multiType: String,
+    val showNext: Boolean,
+    val subTags: List<SubTag>,
+    val title: String
+) : Parcelable {
     data class SubTag(
-            val nextStage: String,
-            val tagId: Int,
-            val tagName: String,
-            val tagType: String)
+        val nextStage: String,
+        val tagId: Int,
+        val tagName: String,
+        val tagType: String
+    )
 
     constructor(source: Parcel) : this(
             source.readString(),

@@ -15,11 +15,9 @@ class NoScrollViewPager : ViewPager {
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {}
 
-
     override fun scrollTo(x: Int, y: Int) {
         super.scrollTo(x, y)
     }
-
 
     override fun setCurrentItem(item: Int, smoothScroll: Boolean) {
         super.setCurrentItem(item, smoothScroll)

@@ -10,10 +10,10 @@ import com.weike.education.bean.course.VideoBean
  *
  */
 interface CourseCategoryContract {
-    interface View :BaseContract.BaseView{
+    interface View : BaseContract.BaseView {
         fun showVideo(videoBean: VideoBean)
     }
-    interface Presenter<T>:BaseContract.BasePresenter<T>{
+    interface Presenter<T> : BaseContract.BasePresenter<T> {
         fun getVideo()
     }
 }

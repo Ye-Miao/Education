@@ -10,11 +10,7 @@ import com.weike.education.base.BaseContract
  */
 interface SectionDetailContract {
 
-    interface View : BaseContract.BaseView {
+    interface View : BaseContract.BaseView
 
-    }
-
-    interface Presenter<T> : BaseContract.BasePresenter<T> {
-
-    }
+    interface Presenter<T> : BaseContract.BasePresenter<T>
 }

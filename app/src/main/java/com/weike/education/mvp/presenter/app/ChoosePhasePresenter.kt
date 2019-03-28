@@ -18,11 +18,10 @@ class ChoosePhasePresenter @Inject constructor(private val mRetrofitHelper: Retr
     override fun getDiscoveryComment() {
         addSubscribe(mRetrofitHelper.getDiscoveryComment()
                 .compose(rxSchedulerHelper())
-                .subscribeWith(object :BaseSubscriber<DiscoveryCommentBean>(mView){
+                .subscribeWith(object : BaseSubscriber<DiscoveryCommentBean>(mView) {
                     override fun onSuccess(mData: DiscoveryCommentBean) {
                         mView?.showDiscoveryComment(mData)
                     }
                 }))
     }
-
 }

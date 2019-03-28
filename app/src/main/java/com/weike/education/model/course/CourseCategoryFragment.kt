@@ -21,7 +21,6 @@ class CourseCategoryFragment : BaseRefreshFragment<CourseCategoryPresenter, Vide
     private var mVideoList = ArrayList<VideoBean.Data.Video>()
     private var mAdapter: CourseCategoryAdapter? = null
 
-
     override fun getLayoutId(): Int = R.layout.fragment_course_category
 
     override fun initPresenter() = mPresenter.attachView(this)
@@ -54,5 +53,4 @@ class CourseCategoryFragment : BaseRefreshFragment<CourseCategoryPresenter, Vide
     override fun finishTask() {
         mAdapter?.notifyDataSetChanged()
     }
-
 }

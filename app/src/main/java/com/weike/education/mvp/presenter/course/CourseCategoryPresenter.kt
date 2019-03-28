@@ -24,5 +24,4 @@ class CourseCategoryPresenter @Inject constructor(private val mRetrofitHelper: R
                     }
                 }))
     }
-
 }

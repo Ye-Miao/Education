@@ -20,11 +20,11 @@ import com.weike.education.widget.section.SectionedRVAdapter
  */
 class SectionFragment : BaseRefreshFragment<SelectionPresenter, SelectionBean>(), SelectionContract.View {
 
-    private val mHeaderList = ArrayList<SelectionBean.Data.Head>()      //顶部banner
-    private val mSpecialList = ArrayList<SelectionBean.Data.Zhuanlan>() //名师推荐
-    private val mSerialList = ArrayList<SelectionBean.Data.Serial>()    //系列好课
-    private val mVideoList = ArrayList<SelectionBean.Data.Video>()      //好课抢先看
-    private val mCourseList = ArrayList<SelectionBean.Data.Course>()    //精选好课
+    private val mHeaderList = ArrayList<SelectionBean.Data.Head>() // 顶部banner
+    private val mSpecialList = ArrayList<SelectionBean.Data.Zhuanlan>() // 名师推荐
+    private val mSerialList = ArrayList<SelectionBean.Data.Serial>() // 系列好课
+    private val mVideoList = ArrayList<SelectionBean.Data.Video>() // 好课抢先看
+    private val mCourseList = ArrayList<SelectionBean.Data.Course>() // 精选好课
     private var mSectionedAdapter: SectionedRVAdapter? = null
 
     override fun getLayoutId(): Int = R.layout.fragment_selection
@@ -73,5 +73,4 @@ class SectionFragment : BaseRefreshFragment<SelectionPresenter, SelectionBean>()
         if (mCourseList.size != 0) mSectionedAdapter?.addSection(SectionCourse(mCourseList))
         mSectionedAdapter?.notifyDataSetChanged()
     }
-
 }

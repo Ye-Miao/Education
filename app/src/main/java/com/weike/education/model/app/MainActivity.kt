@@ -45,11 +45,11 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
 
     override fun initWidget() {
         super.initWidget()
-        //作用：我的账户的状态栏延伸至最顶部
+        // 作用：我的账户的状态栏延伸至最顶部
         StatusBarUtil.setTranslucentForImageView(this, 0, null)
-        //StatusBarUtil.setColorNoTranslucent(this,AppUtils.getColor(R.color.white))
+        // StatusBarUtil.setColorNoTranslucent(this,AppUtils.getColor(R.color.white))
         StatusBarUtil.setLightMode(this)
-        //底部tab
+        // 底部tab
         mTabEntities.add(TabEntity("发现课程", R.drawable.tab_discover_checked, R.drawable.tab_discover))
         mTabEntities.add(TabEntity("我的课程", R.drawable.tab_my_course_checked, R.drawable.tab_my_course))
         mTabEntities.add(TabEntity("我的账户", R.drawable.tab_mine_checked, R.drawable.tab_mine))
@@ -60,7 +60,7 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
     override fun loadData() {
         numbers.add(432)
         numbers.add(1228)
-        mPresenter.getRegionTagTypeBean(numbers) //初始值默认为中学
+        mPresenter.getRegionTagTypeBean(numbers) // 初始值默认为中学
     }
 
     override fun showDiscoveryBean(mDiscoveryCommentBean: DiscoveryCommentBean) {
@@ -100,7 +100,7 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
     }
 
     override fun onTabSelect(position: Int) {
-        //底部按钮切换
+        // 底部按钮切换
         switchFragmentIndex(position)
     }
 
@@ -108,7 +108,7 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
     }
 
     private fun switchFragmentIndex(index: Int) {
-        //特别注意，fragment重叠问题，mCurrentPos是上一个fragment,index是当前fragment
+        // 特别注意，fragment重叠问题，mCurrentPos是上一个fragment,index是当前fragment
         supportFragmentManager
                 .beginTransaction()
                 .apply {

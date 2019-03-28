@@ -22,7 +22,7 @@ abstract class BaseActivity : RxAppCompatActivity() {
 
     protected var mContext: Context? = null
     protected var mToolbar: Toolbar? = null
-    protected open val mBack = true //是否返回
+    protected open val mBack = true // 是否返回
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,9 +35,9 @@ abstract class BaseActivity : RxAppCompatActivity() {
         initVariables()
         App.instance.addActivity(this)
         mToolbar?.let {
-            //初始化Toolbar
-            //initToolbar()
-            //组件化Tool       bar
+            // 初始化Toolbar
+            // initToolbar()
+            // 组件化Toolbar
             setSupportActionBar(it)
             if (mBack) it.setNavigationOnClickListener { finish() }
         }
@@ -52,18 +52,16 @@ abstract class BaseActivity : RxAppCompatActivity() {
     }
 
     open fun initPresenter() {
-
     }
 
     open fun initInject() {
-
     }
 
     @SuppressLint("MissingSuperCall")
     override fun onSaveInstanceState(outState: Bundle) {
-        //如果用以下这种做法则不保存状态，再次进来的话会显示默认tab
-        //总是执行这句代码来调用父类去保存视图层的状态
-        //super.onSaveInstanceState(outState);
+        // 如果用以下这种做法则不保存状态，再次进来的话会显示默认tab
+        // 总是执行这句代码来调用父类去保存视图层的状态
+        // super.onSaveInstanceState(outState);
     }
 
     open fun initToolbar() {
@@ -71,7 +69,6 @@ abstract class BaseActivity : RxAppCompatActivity() {
     }
 
     private fun initStatusBar() = StatusBarUtil.setColorNoTranslucent(mContext as Activity, AppUtils.getColor(R.color.colorPrimary))
-
 
     abstract fun getLayoutId(): Int
 
@@ -91,7 +88,6 @@ abstract class BaseActivity : RxAppCompatActivity() {
     }
 
     fun initRecyclerView() {}
-
 
     /**
      * 隐藏View
@@ -128,5 +124,4 @@ abstract class BaseActivity : RxAppCompatActivity() {
             }
         }
     }
-
 }

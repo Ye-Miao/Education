@@ -7,7 +7,6 @@ import com.weike.education.widget.section.StatelessSection
 import com.weike.education.widget.section.ViewHolder
 import com.zhouwei.mzbanner.MZBannerView
 
-
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
  * date: 2018/11/20

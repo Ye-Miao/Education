@@ -40,6 +40,10 @@ android {
     }
 
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+
+    configurations {
+        ktlint
+    }
 }
 
 dependencies {
@@ -89,4 +93,25 @@ dependencies {
     implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
     //flowlayout
     implementation 'com.zhy:flowlayout-lib:1.0.3'
+    //kotlin编码规约
+    ktlint "com.github.shyiko:ktlint:0.29.0"
+}
+
+
+task ktlint(type: JavaExec, group: "verification") {
+    description = "Check Kotlin code style."
+    classpath = configurations.ktlint
+    main = "com.github.shyiko.ktlint.Main"
+    args "-a", "src/**/*.kt" // -a 表示代码规范使用 Android Kotlin Style Guide，不需要可以去掉，即改为 args "src/**/*.kt"
+    // to generate report in checkstyle format prepend following args:
+    // "--reporter=plain", "--reporter=checkstyle,output=${buildDir}/ktlint.xml"
+    // see https://github.com/shyiko/ktlint#usage for more
+}
+check.dependsOn ktlint
+
+task ktlintFormat(type: JavaExec, group: "formatting") {
+    description = "Fix Kotlin code style deviations."
+    classpath = configurations.ktlint
+    main = "com.github.shyiko.ktlint.Main"
+    args "-F", "src/**/*.kt"
 }

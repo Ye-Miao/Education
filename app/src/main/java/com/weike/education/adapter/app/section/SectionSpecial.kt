@@ -11,7 +11,6 @@ import com.weike.education.widget.section.StatelessSection
 import com.weike.education.widget.section.ViewHolder
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation
 
-
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
  * date: 2018/11/21
@@ -42,7 +41,6 @@ class SectionSpecial(list: List<SelectionBean.Data.Zhuanlan>?) : StatelessSectio
             }
         }
     }
-
 
     override fun onBindHeaderViewHolder(holder: ViewHolder?) {
         holder?.setText(R.id.headTitle, R.string.head_zhuanlan)?.setVisible(R.id.headMore, false)

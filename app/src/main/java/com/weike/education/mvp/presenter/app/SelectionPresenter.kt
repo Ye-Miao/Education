@@ -24,5 +24,4 @@ class SelectionPresenter @Inject constructor(private val mRetrofitHelper: Retrof
                     }
                 }))
     }
-
 }

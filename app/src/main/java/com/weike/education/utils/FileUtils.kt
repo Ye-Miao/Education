@@ -97,9 +97,9 @@ object FileUtils {
         try {
             fi = FileInputStream(src)
             fo = FileOutputStream(desc)
-            val `in` = fi.channel//得到对应的文件通道
-            val out = fo.channel//得到对应的文件通道
-            `in`.transferTo(0, `in`.size(), out)//连接两个通道，并且从in通道读取，然后写入out通道
+            val `in` = fi.channel // 得到对应的文件通道
+            val out = fo.channel // 得到对应的文件通道
+            `in`.transferTo(0, `in`.size(), out) // 连接两个通道，并且从in通道读取，然后写入out通道
         } catch (e: IOException) {
             e.printStackTrace()
         } finally {

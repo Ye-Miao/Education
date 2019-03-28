@@ -22,7 +22,6 @@ import com.zhy.view.flowlayout.TagAdapter
 import kotlinx.android.synthetic.main.activity_select_phase.*
 import kotlinx.android.synthetic.main.common_tag.view.*
 
-
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
  * date: 2018/11/28
@@ -74,25 +73,25 @@ class ChoosePhaseActivity : BaseInjectActivity<ChoosePhasePresenter>(), ChoosePh
     private fun switchScreen() {
         val hostObject = JsonParser().parse(Gson().toJson(mStages)).asJsonObject
         var nextId: String? = null
-        loop@ for (stages in mStages.`154271985`.subTags) {
+        for (stages in mStages.`154271985`.subTags) {
             if (leftId == stages.tagId) {
                 nextId = stages.nextStage
                 switchCategory(mStages.`154271985`.subTags.indexOf(stages))
-                break@loop
+                break
             }
         }
-        loop@ for (article in hostObject.keySet()) {
+        for (article in hostObject.keySet()) {
             if (nextId == article) {
                 val json = hostObject.getAsJsonObject(article)
                 mTagBean = Gson().fromJson(json, TagBean::class.java)
-                second@ for (tag in mTagBean.subTags) {
+                for (tag in mTagBean.subTags) {
                     if (tag.tagId == numbers[1]) {
                         mPosition = mTagBean.subTags.indexOf(tag)
-                        break@second
+                        break
                     }
                 }
                 switchRepresent(mTagBean)
-                break@loop
+                break
             }
         }
     }
@@ -150,5 +149,4 @@ class ChoosePhaseActivity : BaseInjectActivity<ChoosePhasePresenter>(), ChoosePh
         }
         return super.onOptionsItemSelected(item)
     }
-
 }

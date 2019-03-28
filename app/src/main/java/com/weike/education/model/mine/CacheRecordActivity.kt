@@ -19,7 +19,7 @@ class CacheRecordActivity : BaseActivity() {
 
     @SuppressLint("SetTextI18n")
     override fun initWidget() {
-        StatusBarUtil.setColorNoTranslucent(this,AppUtils.getColor(R.color.white))
+        StatusBarUtil.setColorNoTranslucent(this, AppUtils.getColor(R.color.white))
         initToolbar()
         mToolbar?.title = "离线缓存"
 
@@ -38,10 +38,9 @@ class CacheRecordActivity : BaseActivity() {
     }
 
     private fun countProgress(allSpace: Float, freeSpace: Float): Int {
-        //取整相减
+        // 取整相减
         val size = (Math.floor(allSpace.toDouble()) - Math.floor(freeSpace.toDouble())).toInt()
         val v = size / Math.floor(allSpace.toDouble()) * 100
         return Math.floor(v).toInt()
     }
-
 }

@@ -22,7 +22,7 @@ interface MainContract {
     interface Presenter<T> : BaseContract.BasePresenter<T> {
 
         /**
-         * @param  tagId    [所处阶段Id,阶段对应级别（如初中->初一、初二、初三）]
+         * @param tagId [所处阶段Id,阶段对应级别（如初中->初一、初二、初三）]
          * @return
          */
         fun getRegionTagTypeBean(tagId: ArrayList<Int>)

@@ -9,7 +9,6 @@ import com.weike.education.utils.rxSchedulerHelper
 import java.util.*
 import javax.inject.Inject
 
-
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
  * date: 2018/11/16
@@ -34,5 +33,4 @@ class MainPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHel
                     }
                 }))
     }
-
 }

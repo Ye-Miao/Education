@@ -19,9 +19,9 @@ class CrashHandler private constructor() : Thread.UncaughtExceptionHandler {
 
     fun init(context: Context) {
         mContext = context
-        //获取系统默认的UncaughtException处理器
+        // 获取系统默认的UncaughtException处理器
         mExceptionHandler = Thread.getDefaultUncaughtExceptionHandler()
-        //设置该CrashHandler为程序的默认处理器
+        // 设置该CrashHandler为程序的默认处理器
         Thread.setDefaultUncaughtExceptionHandler(this)
     }
 
@@ -30,18 +30,17 @@ class CrashHandler private constructor() : Thread.UncaughtExceptionHandler {
      */
     override fun uncaughtException(t: Thread, e: Throwable) {
         if (!handleException(e) && mExceptionHandler != null) {
-            //如果用户没有处理则让系统默认的异常处理器来处理
+            // 如果用户没有处理则让系统默认的异常处理器来处理
             mExceptionHandler!!.uncaughtException(t, e)
         } else {
-            //异常发生后的自定义操作
-            LogUtils.e("myError",e)
+            // 异常发生后的自定义操作
+            LogUtils.e("myError", e)
         }
     }
 
-
     private fun handleException(ex: Throwable?): Boolean {
         return if (ex == null) false else true
-        //收集异常信息上传bugly
+        // 收集异常信息上传bugly
     }
 
     companion object {
@@ -64,6 +63,4 @@ class CrashHandler private constructor() : Thread.UncaughtExceptionHandler {
                 return INSTANCE
             }
     }
-
-
 }

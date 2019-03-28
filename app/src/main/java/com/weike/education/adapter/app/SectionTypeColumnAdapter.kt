@@ -17,13 +17,12 @@ class SectionTypeColumnAdapter(data: List<VerticalBean.Data.Column.CourseCard.Te
     override fun convert(helper: BaseViewHolder, item: VerticalBean.Data.Column.CourseCard.Teacher) {
         helper.apply {
             item.let {
-                setText(R.id.name, item.name)
+                setText(R.id.name, it.name)
                 Glide.with(mContext)
-                        .load(item.imgUrl)
+                        .load(it.imgUrl)
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(helper.getView(R.id.image))
             }
         }
     }
-
 }

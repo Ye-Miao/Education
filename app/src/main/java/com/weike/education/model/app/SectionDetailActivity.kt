@@ -40,7 +40,7 @@ class SectionDetailActivity : BaseInjectActivity<SectionDetailPresenter>(), Sect
             val h = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
             val w = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
             web_view.measure(w, h)
-            web_view.loadUrl("javascript:function setTop(){document.querySelector('#bannercontainer').style.display=\"none\";}setTop();");
+            web_view.loadUrl("javascript:function setTop(){document.querySelector('#bannercontainer').style.display=\"none\";}setTop();")
         }
 
         override fun onReceivedHttpError(view: WebView?, request: WebResourceRequest?, errorResponse: WebResourceResponse?) {
@@ -48,14 +48,13 @@ class SectionDetailActivity : BaseInjectActivity<SectionDetailPresenter>(), Sect
             val errorHtml = "<html><body><h2>找不到网页</h2></body></html>"
             web_view.loadDataWithBaseURL(null, errorHtml, "text/html", "UTF-8", null)
         }
-
     }
 
     internal inner class WebClient : WebChromeClient() {
 
         override fun onProgressChanged(webView: WebView, i: Int) {
             web_view.settings.blockNetworkImage = false
-            web_view.loadUrl("javascript:function setTop(){document.querySelector('#bannercontainer').style.display=\"none\";}setTop();");
+            web_view.loadUrl("javascript:function setTop(){document.querySelector('#bannercontainer').style.display=\"none\";}setTop();")
             super.onProgressChanged(webView, i)
         }
     }
@@ -65,17 +64,17 @@ class SectionDetailActivity : BaseInjectActivity<SectionDetailPresenter>(), Sect
         val webChromeClient = WebClient()
         val webViewClient = WebClientBase()
         val webSettings = web_view.settings
-        //js支持
+        // js支持
         webSettings.javaScriptEnabled = true
-        //js脚本
+        // js脚本
         webSettings.javaScriptCanOpenWindowsAutomatically = false
-        //设置缓存
+        // 设置缓存
         webSettings.cacheMode = WebSettings.LOAD_NO_CACHE
         webSettings.domStorageEnabled = true
         webSettings.setGeolocationEnabled(true)
-        webSettings.useWideViewPort = true //关键点
-        webSettings.builtInZoomControls = true //设置缩放
-        webSettings.loadWithOverviewMode = true //全屏
+        webSettings.useWideViewPort = true // 关键点
+        webSettings.builtInZoomControls = true // 设置缩放
+        webSettings.loadWithOverviewMode = true // 全屏
         webSettings.setSupportZoom(true)
         webSettings.displayZoomControls = false
         webSettings.setAppCacheEnabled(true)
@@ -88,5 +87,4 @@ class SectionDetailActivity : BaseInjectActivity<SectionDetailPresenter>(), Sect
         web_view.webChromeClient = webChromeClient
         web_view.loadUrl(mUrl)
     }
-
 }

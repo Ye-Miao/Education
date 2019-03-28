@@ -19,7 +19,6 @@ abstract class BaseRefreshFragment<T : BaseContract.BasePresenter<*>, K> : BaseI
     protected var mIsRefreshing = false
     protected var mList = mutableListOf<K>()
 
-
     override fun initRefreshLayout() {
         mRefresh?.let {
             it.setColorSchemeResources(R.color.colorPrimary)

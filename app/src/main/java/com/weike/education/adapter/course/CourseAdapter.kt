@@ -18,22 +18,10 @@ class CourseAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     private var mTitles = AppUtils.getStringArray(R.array.course_title)
     private val mFragment = arrayOfNulls<Fragment>(mTitles.size)
 
-
     override fun getItem(position: Int): Fragment? {
         if (mFragment[position] == null) {
             when (position) {
-                0 ->
-                    //全部课
-                    mFragment[position] = CourseCategoryFragment.newInstance(1)
-                1 ->
-                    //付费课
-                    mFragment[position] = CourseCategoryFragment.newInstance(2)
-                2 ->
-                    //公开课
-                    mFragment[position] = CourseCategoryFragment.newInstance(3)
-                3 ->
-                    //过期课
-                    mFragment[position] = CourseCategoryFragment.newInstance(4)
+                0, 1, 2, 3 -> mFragment[position] = CourseCategoryFragment.newInstance(position + 1)
             }
         }
         return mFragment[position]
