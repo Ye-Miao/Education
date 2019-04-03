@@ -86,7 +86,7 @@
  #保持 Serializable 不被混淆
 -keepnames class * implements java.io.Serializable
 
-            #保持 Serializable 不被混淆并且enum 类也不被混淆
+#保持 Serializable 不被混淆并且enum 类也不被混淆
 -keepclassmembers class * implements java.io.Serializable {
                 static final long serialVersionUID;
                 private static final java.io.ObjectStreamField[] serialPersistentFields;
