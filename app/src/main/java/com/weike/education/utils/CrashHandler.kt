@@ -9,7 +9,8 @@ import android.content.Context
  * desc: 全局异常捕获，当程序发生Uncaught异常时,由该类记录处理上传
  */
 
-class CrashHandler private constructor() : Thread.UncaughtExceptionHandler {
+@SuppressLint("StaticFieldLeak")
+object CrashHandler : Thread.UncaughtExceptionHandler {
 
     /**
      * 系统默认的UncaughtExceptionHandler,用来捕获并处理在一个线程对象中抛出的未检测异常，以避免程序终止
@@ -31,7 +32,7 @@ class CrashHandler private constructor() : Thread.UncaughtExceptionHandler {
     override fun uncaughtException(t: Thread, e: Throwable) {
         if (!handleException(e) && mExceptionHandler != null) {
             // 如果用户没有处理则让系统默认的异常处理器来处理
-            mExceptionHandler!!.uncaughtException(t, e)
+            mExceptionHandler?.uncaughtException(t, e)
         } else {
             // 异常发生后的自定义操作
             LogUtils.e("myError", e)
@@ -41,26 +42,5 @@ class CrashHandler private constructor() : Thread.UncaughtExceptionHandler {
     private fun handleException(ex: Throwable?): Boolean {
         return if (ex == null) false else true
         // 收集异常信息上传bugly
-    }
-
-    companion object {
-        @SuppressLint("StaticFieldLeak")
-        @Volatile
-        private var INSTANCE: CrashHandler? = null
-
-        /**
-         * 获取CrashHandler单例
-         */
-        val instance: CrashHandler?
-            get() {
-                if (INSTANCE == null) {
-                    synchronized(CrashHandler::class.java) {
-                        if (INSTANCE == null) {
-                            INSTANCE = CrashHandler()
-                        }
-                    }
-                }
-                return INSTANCE
-            }
     }
 }

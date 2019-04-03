@@ -11,17 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
-
-        <!--<android.support.design.widget.CollapsingToolbarLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:background="@drawable/pic_section_background"-->
-        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
-        <!--app:contentScrim="?attr/colorPrimary"-->
-        <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
-        <!--app:titleEnabled="false">-->
-
-
+        
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -29,9 +19,6 @@
             app:layout_collapseMode="pin"
             app:navigationIcon="?attr/homeAsUpIndicator"
             app:title=""/>
-
-        <!--</android.support.design.widget.CollapsingToolbarLayout>-->
-
 
     </android.support.design.widget.AppBarLayout>
 

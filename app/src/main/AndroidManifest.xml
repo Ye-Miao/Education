@@ -45,7 +45,7 @@
             android:name=".model.app.ChoosePhaseActivity"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".model.app.SectionDetailActivity"
+            android:name=".model.app.WebViewActivity"
             android:launchMode="singleTask"/>
         <!--course-->
 

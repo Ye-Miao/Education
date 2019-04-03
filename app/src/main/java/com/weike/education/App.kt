@@ -68,17 +68,12 @@ class App : Application() {
 //    fun setCookies(cookies: java.util.HashSet<String>) =
 //            mSp.edit().putStringSet(Constants.EXTRA_COOKIE, cookies).apply()
 
-    private fun initNetwork() {
-        NetworkUtils.startNetService(this)
-    }
+    private fun initNetwork() = NetworkUtils.startNetService(this)
 
-    private fun initCrashHandler() {
-        CrashHandler.instance!!.init(this)
-    }
+    private fun initCrashHandler() = CrashHandler.init(this)
 
-    private fun initLog() {
-        LogUtils.init(this)
-    }
+    private fun initLog() = LogUtils.init(this)
+
 
     /**
      * 增加Activity
@@ -103,8 +98,8 @@ class App : Application() {
     @Synchronized
     fun exitApp() {
         allActivities?.let {
-            for (act in it) {
-                act.finish()
+            it.forEach { activity ->
+                activity.finish()
             }
         }
         android.os.Process.killProcess(android.os.Process.myPid())

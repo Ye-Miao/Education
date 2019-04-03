@@ -7,6 +7,7 @@
     android:background="@color/white"
     android:overScrollMode="never">
 
+    <!--这里都可设置为动态加载-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,9 +43,9 @@
                     android:id="@+id/user_intro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dp30"
                     android:layout_marginStart="@dimen/dp18"
                     android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp30"
                     android:text="@string/user_intro"
                     android:textColor="@color/text_color"
                     app:layout_constraintBottom_toTopOf="@+id/mine_btn"
@@ -82,8 +83,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawablePadding="@dimen/dp10"
                         android:drawableTop="@drawable/ic_mine_address"
+                        android:drawablePadding="@dimen/dp10"
                         android:gravity="center"
                         android:text="@string/mine_address"
                         android:textColor="@color/text_color"/>
@@ -93,8 +94,8 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:drawablePadding="@dimen/dp10"
                         android:drawableTop="@drawable/ic_mine_download"
+                        android:drawablePadding="@dimen/dp10"
                         android:gravity="center"
                         android:text="@string/mine_download"
                         android:textColor="@color/text_color"/>
@@ -103,8 +104,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawablePadding="@dimen/dp10"
                         android:drawableTop="@drawable/ic_mine_key_course"
+                        android:drawablePadding="@dimen/dp10"
                         android:gravity="center"
                         android:text="@string/mine_course"
                         android:textColor="@color/text_color"/>
@@ -113,8 +114,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawablePadding="@dimen/dp10"
                         android:drawableTop="@drawable/ic_mine_order"
+                        android:drawablePadding="@dimen/dp10"
                         android:gravity="center"
                         android:text="@string/mine_order"
                         android:textColor="@color/text_color"/>
@@ -133,8 +134,8 @@
             android:id="@+id/coupon"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp72"
-            android:layout_marginEnd="@dimen/dp10"
             android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
             android:foreground="?attr/selectableItemBackground">
 
             <TextView
@@ -176,8 +177,8 @@
             android:id="@+id/group_booking"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp72"
-            android:layout_marginEnd="@dimen/dp10"
             android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
             android:foreground="?attr/selectableItemBackground">
 
             <TextView
@@ -219,8 +220,8 @@
             android:id="@+id/counsel"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp72"
-            android:layout_marginEnd="@dimen/dp10"
             android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
             android:foreground="?attr/selectableItemBackground">
 
             <TextView
@@ -263,8 +264,8 @@
             android:id="@+id/service"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp72"
-            android:layout_marginEnd="@dimen/dp10"
             android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
             android:foreground="?attr/selectableItemBackground">
 
             <TextView
@@ -307,8 +308,8 @@
             android:id="@+id/setting"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp72"
-            android:layout_marginEnd="@dimen/dp10"
             android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
             android:foreground="?attr/selectableItemBackground">
 
             <TextView

@@ -7,15 +7,17 @@ import com.weike.education.R
 import com.weike.education.base.BaseInjectActivity
 import com.weike.education.mvp.contract.app.SectionDetailContract
 import com.weike.education.mvp.presenter.app.SectionDetailPresenter
+import com.weike.education.utils.AppUtils
+import com.weike.education.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.activity_section_detail.*
 
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
  * date: 2019/1/5
- * desc:
+ * desc: 此界面可设置为通用WebView界面
  *
  */
-class SectionDetailActivity : BaseInjectActivity<SectionDetailPresenter>(), SectionDetailContract.View {
+class WebViewActivity : BaseInjectActivity<SectionDetailPresenter>(), SectionDetailContract.View {
 
     private var mUrl = "https://ke.youdao.com/course/detail/18906?inLoc=fp_h_0&Pdt=CourseWeb"
 
@@ -29,6 +31,7 @@ class SectionDetailActivity : BaseInjectActivity<SectionDetailPresenter>(), Sect
         // 必须调用这个，不然效果无效
         setSupportActionBar(toolbar)
         toolbar.setNavigationOnClickListener { finish() }
+        StatusBarUtil.setColorNoTranslucent(this, AppUtils.getColor(R.color.colorPrimary))
         initWebView()
     }
 
@@ -61,30 +64,40 @@ class SectionDetailActivity : BaseInjectActivity<SectionDetailPresenter>(), Sect
 
     @SuppressLint("SetJavaScriptEnabled")
     private fun initWebView() {
-        val webChromeClient = WebClient()
-        val webViewClient = WebClientBase()
+        val chromeClient = WebClient()
+        val viewClient = WebClientBase()
         val webSettings = web_view.settings
-        // js支持
-        webSettings.javaScriptEnabled = true
-        // js脚本
-        webSettings.javaScriptCanOpenWindowsAutomatically = false
-        // 设置缓存
-        webSettings.cacheMode = WebSettings.LOAD_NO_CACHE
-        webSettings.domStorageEnabled = true
-        webSettings.setGeolocationEnabled(true)
-        webSettings.useWideViewPort = true // 关键点
-        webSettings.builtInZoomControls = true // 设置缩放
-        webSettings.loadWithOverviewMode = true // 全屏
-        webSettings.setSupportZoom(true)
-        webSettings.displayZoomControls = false
-        webSettings.setAppCacheEnabled(true)
-        webSettings.layoutAlgorithm = WebSettings.LayoutAlgorithm.SINGLE_COLUMN
-        web_view.isDrawingCacheEnabled = true
-        web_view.settings.blockNetworkImage = true
-        web_view.webViewClient = webViewClient
-        web_view.requestFocus(View.FOCUS_DOWN)
-        web_view.settings.defaultTextEncodingName = "UTF-8"
-        web_view.webChromeClient = webChromeClient
-        web_view.loadUrl(mUrl)
+
+        webSettings.apply {
+            // js支持
+            javaScriptEnabled = true
+            // js脚本
+            javaScriptCanOpenWindowsAutomatically = false
+            // 设置缓存
+            cacheMode = WebSettings.LOAD_NO_CACHE
+
+            domStorageEnabled = true
+            setGeolocationEnabled(true)
+            // 关键点
+            useWideViewPort = true
+            // 设置缩放
+            builtInZoomControls = true
+            // 全屏
+            loadWithOverviewMode = true
+            setSupportZoom(true)
+            displayZoomControls = false
+            setAppCacheEnabled(true)
+            layoutAlgorithm = WebSettings.LayoutAlgorithm.SINGLE_COLUMN
+        }
+
+        web_view.apply {
+            isDrawingCacheEnabled = true
+            settings.blockNetworkImage = true
+            webViewClient = viewClient
+            requestFocus(View.FOCUS_DOWN)
+            settings.defaultTextEncodingName = "UTF-8"
+            webChromeClient = chromeClient
+            loadUrl(mUrl)
+        }
     }
 }

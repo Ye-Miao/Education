@@ -6,7 +6,7 @@ import com.weike.education.di.module.ActivityModule
 import com.weike.education.di.scope.ActivityScope
 import com.weike.education.model.app.ChoosePhaseActivity
 import com.weike.education.model.app.MainActivity
-import com.weike.education.model.app.SectionDetailActivity
+import com.weike.education.model.app.WebViewActivity
 
 import dagger.Component
 
@@ -24,5 +24,5 @@ interface ActivityComponent {
 
     fun inject(activity: ChoosePhaseActivity)
 
-    fun inject(activity: SectionDetailActivity)
+    fun inject(activity: WebViewActivity)
 }

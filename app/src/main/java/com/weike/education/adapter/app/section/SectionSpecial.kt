@@ -6,7 +6,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.weike.education.R
 import com.weike.education.bean.app.SelectionBean
-import com.weike.education.model.app.SectionDetailActivity
+import com.weike.education.model.app.WebViewActivity
 import com.weike.education.widget.section.StatelessSection
 import com.weike.education.widget.section.ViewHolder
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation
@@ -38,7 +38,7 @@ class SectionSpecial(list: List<SelectionBean.Data.Zhuanlan>?) : StatelessSectio
                         .into(getView(R.id.special_imgView))
 
                 itemView.setOnClickListener {
-                    mContext.startActivity(Intent(mContext, SectionDetailActivity::class.java))
+                    mContext.startActivity(Intent(mContext, WebViewActivity::class.java))
                 }
             }
         }
