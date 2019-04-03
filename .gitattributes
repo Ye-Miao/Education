@@ -1,3 +1,3 @@
-*.js linguist-language=kotlin
-*.css linguist-language=kotlin
-*.html linguist-language=kotlin
+*.js linguist-language=Kotlin
+*.css linguist-language=Kotlin
+*.html linguist-language=Kotlin
