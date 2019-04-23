@@ -32,6 +32,7 @@ public class NumberProgressBar extends View {
      */
     private int mReachedBarColor;
 
+
     /**
      * The bar unreached area color.
      */

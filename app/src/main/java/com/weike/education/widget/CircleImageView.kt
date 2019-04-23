@@ -212,7 +212,7 @@ class CircleImageView @JvmOverloads constructor(context: Context, attrs: Attribu
         mShaderMatrix.setScale(scale, scale)
         mShaderMatrix.postTranslate(((dx + 0.5f).toInt() + mBorderWidth).toFloat(), ((dy + 0.5f).toInt() + mBorderWidth).toFloat())
 
-        mBitmapShader!!.setLocalMatrix(mShaderMatrix)
+        mBitmapShader?.setLocalMatrix(mShaderMatrix)
     }
 
     companion object {

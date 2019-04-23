@@ -7,7 +7,7 @@ import com.weike.education.di.module.ActivityModule;
 import com.weike.education.di.module.ActivityModule_ProvideActivityFactory;
 import com.weike.education.model.app.ChoosePhaseActivity;
 import com.weike.education.model.app.MainActivity;
-import com.weike.education.model.app.SectionDetailActivity;
+import com.weike.education.model.app.WebViewActivity;
 import com.weike.education.mvp.presenter.app.ChoosePhasePresenter;
 import com.weike.education.mvp.presenter.app.MainPresenter;
 import com.weike.education.mvp.presenter.app.SectionDetailPresenter;
@@ -72,8 +72,8 @@ public final class DaggerActivityComponent implements ActivityComponent {
   }
 
   @Override
-  public void inject(SectionDetailActivity activity) {
-    injectSectionDetailActivity(activity);
+  public void inject(WebViewActivity activity) {
+    injectWebViewActivity(activity);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -86,7 +86,7 @@ public final class DaggerActivityComponent implements ActivityComponent {
     return instance;
   }
 
-  private SectionDetailActivity injectSectionDetailActivity(SectionDetailActivity instance) {
+  private WebViewActivity injectWebViewActivity(WebViewActivity instance) {
     BaseInjectActivity_MembersInjector.injectMPresenter(instance, getSectionDetailPresenter());
     return instance;
   }

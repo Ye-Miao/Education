@@ -55,7 +55,7 @@ abstract class BaseSubscriber<T>(private val view: BaseContract.BaseView?) : Res
                     is HttpException -> it.showError("数据加载失败ヽ(≧Д≦)ノ")
                     else -> {
                         view.showError("未知错误ヽ(≧Д≦)ノ")
-                        LogUtils.e("MYERROR:" + e.toString())
+                        LogUtils.e("MYERROR:$e")
                     }
                 }
             }
