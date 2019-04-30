@@ -83,8 +83,8 @@ class ChoosePhaseActivity : BaseInjectActivity<ChoosePhasePresenter>(), ChoosePh
         hostObject.keySet().forEach {
             if (it == nextId) {
                 val json = hostObject.getAsJsonObject(it)
-                val mSubTags = Gson().fromJson(json, TagBean::class.java)
-                mSubTags.subTags.forEach { subTag ->
+                mTagBean = Gson().fromJson(json, TagBean::class.java)
+                mTagBean.subTags.forEach { subTag ->
                     if (subTag.tagId == numbers[1]) {
                         mPosition = mTagBean.subTags.indexOf(subTag)
                     }
