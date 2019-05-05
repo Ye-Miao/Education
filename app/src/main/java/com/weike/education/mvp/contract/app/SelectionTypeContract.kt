@@ -1,7 +1,7 @@
 package com.weike.education.mvp.contract.app
 
 import com.weike.education.base.BaseContract
-import com.weike.education.bean.app.VerticalBean
+import com.weike.education.mvp.model.app.VerticalBean
 
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com

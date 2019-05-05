@@ -2,7 +2,7 @@ package com.weike.education.mvp.presenter.app
 
 import com.weike.education.base.BaseSubscriber
 import com.weike.education.base.RxPresenter
-import com.weike.education.bean.app.VerticalBean
+import com.weike.education.mvp.model.app.VerticalBean
 import com.weike.education.mvp.contract.app.SelectionTypeContract
 import com.weike.education.network.helper.RetrofitHelper
 import com.weike.education.utils.rxSchedulerHelper

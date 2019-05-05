@@ -1228,7 +1228,6 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable pic_section_background
 drawable search_icon
 drawable section_serial_categoryname
 drawable section_serial_gradient

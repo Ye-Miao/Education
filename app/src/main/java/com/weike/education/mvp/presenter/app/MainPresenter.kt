@@ -2,8 +2,8 @@ package com.weike.education.mvp.presenter.app
 
 import com.weike.education.base.BaseSubscriber
 import com.weike.education.base.RxPresenter
-import com.weike.education.bean.app.TagSuccessBean
 import com.weike.education.mvp.contract.app.MainContract
+import com.weike.education.mvp.model.app.TagSuccessBean
 import com.weike.education.network.helper.RetrofitHelper
 import com.weike.education.utils.rxSchedulerHelper
 import java.util.*
@@ -22,9 +22,7 @@ class MainPresenter @Inject constructor(private val mRetrofitHelper: RetrofitHel
         val subscriber = mRetrofitHelper.getDiscoveryComment()
                 .flatMap {
                     mView?.showDiscoveryBean(it)
-                    val map = HashMap<String, Any>()
-                    map["tags"] = tagId
-                    mRetrofitHelper.setTag(map)
+                    mRetrofitHelper.setTag(tagId)
                 }
                 .compose(rxSchedulerHelper())
                 .subscribeWith(object : BaseSubscriber<TagSuccessBean>(mView) {

@@ -2,8 +2,8 @@ package com.weike.education.mvp.presenter.course
 
 import com.weike.education.base.BaseSubscriber
 import com.weike.education.base.RxPresenter
-import com.weike.education.bean.course.VideoBean
 import com.weike.education.mvp.contract.course.CourseCategoryContract
+import com.weike.education.mvp.model.course.VideoBean
 import com.weike.education.network.helper.RetrofitHelper
 import com.weike.education.utils.rxSchedulerHelper
 import javax.inject.Inject

@@ -1,7 +1,7 @@
 package com.weike.education.mvp.contract.mine
 
 import com.weike.education.base.BaseContract
-import com.weike.education.bean.mine.MineBean
+import com.weike.education.mvp.model.mine.MineBean
 
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com

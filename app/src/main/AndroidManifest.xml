@@ -29,7 +29,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <!--app-->
         <activity
-            android:name=".model.app.SplashActivity"
+            android:name="com.weike.education.ui.activity.app.SplashActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -39,25 +39,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".model.app.MainActivity"
+            android:name="com.weike.education.ui.activity.app.MainActivity"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".model.app.ChoosePhaseActivity"
+            android:name="com.weike.education.ui.activity.app.ChoosePhaseActivity"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".model.app.WebViewActivity"
+            android:name="com.weike.education.ui.activity.app.WebViewActivity"
             android:launchMode="singleTask"/>
         <!--course-->
 
         <!--mine-->
         <activity
-            android:name=".model.mine.CacheRecordActivity"
+            android:name="com.weike.education.ui.activity.mine.CacheRecordActivity"
             android:launchMode="singleTask"/>
         <!--widget-->
         <service android:name=".widget.NetworkService"/>
         <!--media-->
         <activity
-            android:name=".model.course.video.VideoPlayerActivity"
+            android:name="com.weike.education.ui.activity.course.VideoPlayerActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
             android:exported="false"
             android:label="@string/app_name"

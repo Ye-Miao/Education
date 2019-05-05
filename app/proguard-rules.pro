@@ -81,7 +81,7 @@
     @android.webkit.JavascriptInterface <methods>;
 }
 
--keep class com.weike.education.bean.** {*;}
+-keep class com.weike.education.mvp.bean.** {*;}
 
  #保持 Serializable 不被混淆
 -keepnames class * implements java.io.Serializable

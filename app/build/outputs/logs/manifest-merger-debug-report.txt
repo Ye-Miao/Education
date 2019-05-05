@@ -151,14 +151,14 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\31663\.gra
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:28:9-44
 	android:name
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:22:9-28
-activity#com.weike.education.model.app.SplashActivity
+activity#com.weike.education.ui.activity.app.SplashActivity
 ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:31:9-40:20
 	android:screenOrientation
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:34:13-49
 	android:launchMode
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:33:13-44
 	android:name
-		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:32:13-53
+		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:32:13-78
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:35:13-39:29
 action#android.intent.action.MAIN
@@ -169,35 +169,35 @@ category#android.intent.category.LAUNCHER
 ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:38:17-76
 	android:name
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:38:27-74
-activity#com.weike.education.model.app.MainActivity
+activity#com.weike.education.ui.activity.app.MainActivity
 ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:41:9-43:46
 	android:launchMode
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:43:13-44
 	android:name
-		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:42:13-51
-activity#com.weike.education.model.app.ChoosePhaseActivity
+		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:42:13-76
+activity#com.weike.education.ui.activity.app.ChoosePhaseActivity
 ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:44:9-46:46
 	android:launchMode
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:46:13-44
 	android:name
-		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:45:13-58
-activity#com.weike.education.model.app.WebViewActivity
+		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:45:13-83
+activity#com.weike.education.ui.activity.app.WebViewActivity
 ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:47:9-49:46
 	android:launchMode
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:49:13-44
 	android:name
-		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:48:13-54
-activity#com.weike.education.model.mine.CacheRecordActivity
+		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:48:13-79
+activity#com.weike.education.ui.activity.mine.CacheRecordActivity
 ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:53:9-55:46
 	android:launchMode
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:55:13-44
 	android:name
-		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:54:13-59
+		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:54:13-84
 service#com.weike.education.widget.NetworkService
 ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:57:9-57
 	android:name
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:57:18-55
-activity#com.weike.education.model.course.video.VideoPlayerActivity
+activity#com.weike.education.ui.activity.course.VideoPlayerActivity
 ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:59:9-67:62
 	android:screenOrientation
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:65:13-50
@@ -214,7 +214,7 @@ ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:59:9-6
 	android:theme
 		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:66:13-46
 	android:name
-		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:60:13-67
+		ADDED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml:60:13-86
 uses-sdk
 INJECTED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from I:\Android\resource\Education\app\src\main\AndroidManifest.xml

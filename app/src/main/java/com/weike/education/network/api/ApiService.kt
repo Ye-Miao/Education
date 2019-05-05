@@ -1,15 +1,14 @@
 package com.weike.education.network.api
 
-import com.weike.education.bean.app.DiscoveryCommentBean
-import com.weike.education.bean.app.SelectionBean
-import com.weike.education.bean.app.TagSuccessBean
-import com.weike.education.bean.app.VerticalBean
-import com.weike.education.bean.course.VideoBean
-import com.weike.education.bean.mine.MineBean
+import com.weike.education.mvp.model.app.DiscoveryCommentBean
+import com.weike.education.mvp.model.app.SelectionBean
+import com.weike.education.mvp.model.app.TagSuccessBean
+import com.weike.education.mvp.model.app.VerticalBean
+import com.weike.education.mvp.model.course.VideoBean
+import com.weike.education.mvp.model.mine.MineBean
 import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query
-import retrofit2.http.QueryMap
 
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
@@ -21,8 +20,8 @@ interface ApiService {
     /**
      * 首页层次（学习阶段分层）
      */
-    @get:GET("/course3/api/content/stages?api_ver=1.10&keyfrom=course.3.2.2.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1080x1920&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android")
-    val discoveryComment: Flowable<DiscoveryCommentBean>
+    @GET("/course3/api/content/stages?api_ver=1.10&keyfrom=course.3.2.2.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1080x1920&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android")
+    fun getDiscoveryCommentData(): Flowable<DiscoveryCommentBean>
 
     /**
      * 获取相应Tag页面的内容(tag由上面接口获取)
@@ -31,25 +30,27 @@ interface ApiService {
     @GET("/course3/api/vertical2?api_ver=1.10&keyfrom=course.3.2.2.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1080x1920&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android")
     fun getVertical(@Query("tag") tag: Int): Flowable<VerticalBean>
 
-    @JvmSuppressWildcards
+    /**
+     * 修改当前学习阶段
+     */
     @GET("/course3/api/user/profile/tag/set?api_ver=1.10&keyfrom=course.3.2.2.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1080x1920&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android")
-    fun setTag(@QueryMap tags: Map<String, Any>): Flowable<TagSuccessBean>
+    fun setTag(@Query("tags") tagList: ArrayList<Int>): Flowable<TagSuccessBean>
 
     /**
      * 获取精选内容
      */
-    @get:GET("/course3/api/apphome?api_ver=1.10&keyfrom=course.3.2.2.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1440x2560&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android&popup=false")
-    val selection: Flowable<SelectionBean>
+    @GET("/course3/api/apphome?api_ver=1.10&keyfrom=course.3.2.2.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1440x2560&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android&popup=false")
+    fun getSelectionData(): Flowable<SelectionBean>
 
     /**
      * 获取头像，名字
      */
-    @get:GET("/api/user_status.jsonp?&keyfrom=course.3.2.4.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1080x1920&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android")
-    val mine: Flowable<MineBean>
+    @GET("/api/user_status.jsonp?&keyfrom=course.3.2.4.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1080x1920&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android")
+    fun getMineData(): Flowable<MineBean>
 
     /**
      * 获取视频流
      */
-    @get:GET("/course3/api/content/video?api_ver=2.0&rank=0&keyfrom=course.3.2.4.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1080x1920&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android")
-    val video: Flowable<VideoBean>
+    @GET("/course3/api/content/video?api_ver=2.0&rank=0&keyfrom=course.3.2.4.android&model=MI_6&mid=8.0.0&imei=866822031582307&vendor=xiaomi&screen=1080x1920&abtest=6&Mkt1st=xiaomi&Mkt=xiaomi&Pdt=mCourse.android")
+    fun getVideoData(): Flowable<VideoBean>
 }

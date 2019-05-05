@@ -2,7 +2,7 @@ package com.weike.education.mvp.presenter.mine
 
 import com.weike.education.base.BaseSubscriber
 import com.weike.education.base.RxPresenter
-import com.weike.education.bean.mine.MineBean
+import com.weike.education.mvp.model.mine.MineBean
 import com.weike.education.mvp.contract.mine.MineContract
 import com.weike.education.network.helper.RetrofitHelper
 import com.weike.education.utils.rxSchedulerHelper
