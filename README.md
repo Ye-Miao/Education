@@ -1,5 +1,8 @@
 # Education
 An unofficial youdao client for android 
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/%E9%9D%A2%E5%90%91-Android%E5%BC%80%E5%8F%91-%232CC159.svg"></a>
+</p>
 
 ## Remark
 
