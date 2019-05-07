@@ -7,7 +7,6 @@
     android:layout_below="@+id/fl_content"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="?attr/selectableItemBackground"
     android:gravity="center"
     android:text="@string/footer"
     android:textColor="@color/bottom_textUnSelectColor"

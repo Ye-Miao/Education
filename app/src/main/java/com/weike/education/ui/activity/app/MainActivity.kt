@@ -28,15 +28,21 @@ import kotlin.collections.ArrayList
 
 class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, MainContract.View {
 
-    private val CHOOSE_REQUESTCODE = 1
+    private val CHOOSE_REQUEST_CODE = 1
     private var exitTime = 0L
     private var mCurrentPos = -1
     private val numbers = ArrayList<Int>()
     private var mFragments = mutableListOf<Fragment>()
     private var mTabEntities = ArrayList<CustomTabEntity>()
-    private lateinit var stages: DiscoveryCommentBean.Data.Stages
     private lateinit var mTagBean: TagBean
     private var title: String? = null
+
+    private val mTitles = arrayOf("发现课程", "我的课程", "我的账户")
+
+    // 未被选中的图标
+    private val mIconUnSelectIds = intArrayOf(R.drawable.tab_discover, R.drawable.tab_my_course, R.drawable.tab_mine)
+    // 被选中的图标
+    private val mIconSelectIds = intArrayOf(R.drawable.tab_discover_checked, R.drawable.tab_my_course_checked, R.drawable.tab_mine_checked)
 
     override fun getLayoutId(): Int = R.layout.activity_main
 
@@ -48,12 +54,12 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
         super.initWidget()
         // 作用：我的账户的状态栏延伸至最顶部
         StatusBarUtil.setTranslucentForImageView(this, 0, null)
-        // StatusBarUtil.setColorNoTranslucent(this,AppUtils.getColor(R.color.white))
         StatusBarUtil.setLightMode(this)
-        // 底部tab
-        mTabEntities.add(TabEntity("发现课程", R.drawable.tab_discover_checked, R.drawable.tab_discover))
-        mTabEntities.add(TabEntity("我的课程", R.drawable.tab_my_course_checked, R.drawable.tab_my_course))
-        mTabEntities.add(TabEntity("我的账户", R.drawable.tab_mine_checked, R.drawable.tab_mine))
+
+        (0 until mTitles.size)
+                .mapTo(mTabEntities) { TabEntity(mTitles[it], mIconSelectIds[it], mIconUnSelectIds[it]) }
+
+
         bottom_main.setTabData(mTabEntities)
         bottom_main.setOnTabSelectListener(this)
     }
@@ -65,7 +71,7 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
     }
 
     override fun showDiscoveryBean(mDiscoveryCommentBean: DiscoveryCommentBean) {
-        stages = mDiscoveryCommentBean.data.stages
+        val stages = mDiscoveryCommentBean.data.stages
         val hostObject = JsonParser().parse(Gson().toJson(stages)).asJsonObject
         var nextId: String? = null
         var result = JsonObject()
@@ -100,13 +106,10 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
         switchFragmentIndex(0)
     }
 
-    override fun onTabSelect(position: Int) {
-        // 底部按钮切换
-        switchFragmentIndex(position)
-    }
+    override fun onTabSelect(position: Int) = switchFragmentIndex(position)
 
-    override fun onTabReselect(position: Int) {
-    }
+
+    override fun onTabReselect(position: Int) {}
 
     private fun switchFragmentIndex(index: Int) {
         // 特别注意，fragment重叠问题，mCurrentPos是上一个fragment,index是当前fragment
@@ -127,7 +130,7 @@ class MainActivity : BaseInjectActivity<MainPresenter>(), OnTabSelectListener, M
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK) {
             when (requestCode) {
-                CHOOSE_REQUESTCODE -> {
+                CHOOSE_REQUEST_CODE -> {
                     val bundle = data?.extras
                     bundle?.let {
                         numbers.clear()

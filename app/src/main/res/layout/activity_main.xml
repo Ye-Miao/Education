@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.activity.app.MainActivity">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/fl_content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="match_parent"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp0.5"
+        android:layout_above="@+id/bottom_main"
         android:background="@color/window_background"/>
 
     <com.flyco.tablayout.CommonTabLayout
         android:id="@+id/bottom_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_height="@dimen/dp50"
+        android:layout_alignParentBottom="true"
         android:background="@color/bottom_color"
-        android:paddingTop="@dimen/dp5"
-        android:paddingBottom="@dimen/dp5"
         app:tl_iconGravity="TOP"
         app:tl_iconMargin="@dimen/dp2"
         app:tl_textSelectColor="@color/bottom_textSelectColor"
         app:tl_textUnselectColor="@color/bottom_textUnSelectColor"/>
 
-</LinearLayout>
+</RelativeLayout>

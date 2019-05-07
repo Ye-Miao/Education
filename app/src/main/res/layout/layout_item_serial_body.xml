@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp10"
-            android:background="@drawable/section_serialtype_coursecount"
+            android:background="@drawable/serial_type_count"
             android:textColor="@color/serialType_courseCount_textColor"
             android:textSize="@dimen/text_size_10"
             app:layout_constraintTop_toBottomOf="@+id/title"/>

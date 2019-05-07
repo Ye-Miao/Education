@@ -100,7 +100,7 @@
                     android:minHeight="@dimen/dp3"
                     android:paddingLeft="@dimen/dp16"
                     android:paddingRight="@dimen/dp16"
-                    android:thumb="@drawable/videoplayer_erect_icon_round"/>
+                    android:thumb="@drawable/video_icon_round"/>
             </RelativeLayout>
 
 

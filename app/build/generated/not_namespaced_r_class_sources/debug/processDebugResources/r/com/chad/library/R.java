@@ -34,12 +34,12 @@ public final class R {
         public static final int BaseQuickAdapter_dragging_support = 0x7f090005;
         public static final int BaseQuickAdapter_swiping_support = 0x7f090006;
         public static final int BaseQuickAdapter_viewholder_support = 0x7f090007;
-        public static final int load_more_load_end_view = 0x7f09009d;
-        public static final int load_more_load_fail_view = 0x7f09009e;
-        public static final int load_more_loading_view = 0x7f09009f;
-        public static final int loading_progress = 0x7f0900a1;
-        public static final int loading_text = 0x7f0900a2;
-        public static final int tv_prompt = 0x7f090136;
+        public static final int load_more_load_end_view = 0x7f09009c;
+        public static final int load_more_load_fail_view = 0x7f09009d;
+        public static final int load_more_loading_view = 0x7f09009e;
+        public static final int loading_progress = 0x7f0900a0;
+        public static final int loading_text = 0x7f0900a1;
+        public static final int tv_prompt = 0x7f090135;
     }
     public static final class layout {
         private layout() {}
