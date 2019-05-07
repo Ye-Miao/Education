@@ -8,3 +8,5 @@
 /build
 /captures
 .externalNativeBuild
+app/build/intermediates/transforms/dexBuilder/debug/50.jar
+app/build/outputs/apk/
