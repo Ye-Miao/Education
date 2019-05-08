@@ -32,13 +32,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/BaseAppTheme" >
 
         <!-- app -->
         <activity
             android:name="com.weike.education.ui.activity.app.SplashActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,22 +44,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.weike.education.ui.activity.app.MainActivity"
-            android:launchMode="singleTask" />
-        <activity
-            android:name="com.weike.education.ui.activity.app.ChoosePhaseActivity"
-            android:launchMode="singleTask" />
-        <activity
-            android:name="com.weike.education.ui.activity.app.WebViewActivity"
-            android:launchMode="singleTask" />
-        <!-- course -->
-
-
+        <activity android:name="com.weike.education.ui.activity.app.MainActivity" />
+        <activity android:name="com.weike.education.ui.activity.app.ChoosePhaseActivity" />
+        <activity android:name="com.weike.education.ui.activity.app.WebViewActivity" />
         <!-- mine -->
-        <activity
-            android:name="com.weike.education.ui.activity.mine.CacheRecordActivity"
-            android:launchMode="singleTask" />
+        <activity android:name="com.weike.education.ui.activity.mine.CacheRecordActivity" />
         <!-- widget -->
         <service android:name="com.weike.education.widget.NetworkService" />
         <!-- media -->

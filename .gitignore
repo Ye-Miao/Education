@@ -1,12 +1,36 @@
+/gradle/wrapper/gradle-wrapper.properties
+##----------Android----------
+# build
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+build/
+
+# gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+local.properties
+
+##----------idea----------
 *.iml
-.gradle
-/local.properties
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
+.idea/
+*.ipr
+*.iws
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+##----------Other----------
+# osx
+*~
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-app/build/intermediates/transforms/dexBuilder/debug/50.jar
-app/build/outputs/apk/
+gradle.properties
+app/libs/
+app/src/main/assets/
+app/src/main/java/com/weike/education/ui/adapter/mine/
+app/src/main/res/drawable-mdpi/
+app/src/main/res/drawable-xxxhdpi/
