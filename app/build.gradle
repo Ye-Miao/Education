@@ -14,19 +14,9 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        release {
-            storeFile file("I:/resource/Education/education.jks")
-            storePassword "aa123456"
-            keyAlias "key0"
-            keyPassword "aa123456"
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled true
-            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
