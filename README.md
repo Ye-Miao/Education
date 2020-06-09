@@ -13,6 +13,8 @@ An unofficial youdao client for android
 ## Link
 <a href="https://fir.im/gx5r">下载传送门</a>
 
+ps: 接口已失效
+
 ## Screenshots
 
 <a href="screenshots/one.png"><img src="screenshots/one.png" width="30%"/></a> 
